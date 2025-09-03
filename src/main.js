@@ -1,9 +1,21 @@
 import { createApp } from 'vue'
-import { router } from './routes/routes.js'
+import { Quasar } from 'quasar'
+import { createPinia } from 'pinia'
+
+import 'quasar/src/css/index.sass'
+import '@quasar/extras/material-icons/material-icons.css'
+
 import App from './App.vue'
+import router from './router'
 
-const app = createApp(App)
+const myApp = createApp(App)
+const pinia = createPinia()
 
-app.use(router)
+myApp.use(Quasar, {
+  components: ['QLayout', 'QHeader', 'QToolbar', 'QToolbarTitle', 'QAvatar', 'QBtn', 'QBtnDropdown', 'QList', 'QItem', 'QItemSection', 'QItemLabel', 'QPageContainer', 'QPage'],
+  plugins: {},
+})
+myApp.use(pinia)
+myApp.use(router)
 
-app.mount('#app')
+myApp.mount('#app')
