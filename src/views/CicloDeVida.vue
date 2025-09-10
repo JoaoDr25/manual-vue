@@ -14,6 +14,9 @@
       Estos hooks permiten ejecutar lógica en momentos específicos, como obtener datos de una API
       o limpiar recursos.
     </p>
+    <div class="imagenes-qr">
+      <img src="../assets/lifeCycle.jpeg" alt="lifeCycle" class="imagen">
+    </div>
 
   </q-page>
 </template>
@@ -24,6 +27,7 @@
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
 }
+
 .ciclo-qr h1{
 font-family: 'prototype', sans-serif;
 font-size: 4rem;
@@ -31,10 +35,27 @@ font-weight: 100;
 padding: 0 0 0 15px;
 margin: 15px 0px -2px 0px;
 }
+
 .ciclo-qr p{
  font-size: 17px;
     margin: 20px;
     font-family: sans-serif;
+}
+
+.imagenes-qr {
+    display: flex;
+    justify-items: center;
+}
+
+.imagenes-qr img {
+    width: 40rem;
+    filter: drop-shadow(2px 4px 6px black);
+    margin-left: 22px;
+    transition: transform 0.3s ease;
+}
+
+.imagenes-qr img:hover {
+    transform: scale(1.009);
 }
 
 </style>
