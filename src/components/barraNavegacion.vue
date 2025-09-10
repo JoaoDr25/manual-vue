@@ -94,4 +94,8 @@ import { QHeader, QToolbar, QToolbarTitle, QAvatar, QBtn, QBtnDropdown, QList, Q
     width: 214px;
     padding-top: 13px;
 }
+.requeri-pb{
+  color: red;
+}
+
 </style>

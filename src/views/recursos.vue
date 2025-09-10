@@ -1,5 +1,5 @@
 <template>
-  <q-page padding>
+  <q-page padding class="recursos-qr">
 <h1>Recursos de Aprendizaje</h1>
 <ul>
   <li><a href="https://vuejs.org" target="_blank">Documentación Oficial de Vue.js</a></li>
@@ -17,3 +17,22 @@ para inspeccionar componentes, props y estado global.
 </template>
 
 <script setup></script>
+<style scoped>
+@font-face {
+  font-family: 'prototype';
+  src: url('../fonts/Prototype.ttf') format('truetype');
+}
+.recursos-qr h1{
+font-family: 'prototype', sans-serif;
+font-size: 4rem;
+font-weight: 100;
+padding: 0 0 0 15px;
+margin: 15px 0px -2px 0px;
+}
+.recurrsos-qr p{
+ font-size: 17px;
+    margin: 20px;
+    font-family: sans-serif;
+}
+
+</style>

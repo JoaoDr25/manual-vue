@@ -1,5 +1,5 @@
 <template>
-  <q-page padding>
+  <q-page padding class="ciclo-qr">
     <h1>Ciclo de Vida de un Componente</h1>
     <p>
       Cada componente de Vue pasa por una serie de etapas, conocidas como ciclo de vida.
@@ -19,3 +19,22 @@
 </template>
 
 <script setup></script>
+<style scoped>
+@font-face {
+  font-family: 'prototype';
+  src: url('../fonts/Prototype.ttf') format('truetype');
+}
+.ciclo-qr h1{
+font-family: 'prototype', sans-serif;
+font-size: 4rem;
+font-weight: 100;
+padding: 0 0 0 15px;
+margin: 15px 0px -2px 0px;
+}
+.ciclo-qr p{
+ font-size: 17px;
+    margin: 20px;
+    font-family: sans-serif;
+}
+
+</style>
