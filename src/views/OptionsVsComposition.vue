@@ -14,14 +14,18 @@
       La Composition API es ideal para proyectos grandes porque facilita la reutilización de lógica,
       mientras que la Options API puede ser más clara para principiantes.
     </p>
-    <div class="titles-qr">
-    <h6>Options Api</h6><h6>Compositions Api</h6>
+    <div class="contenidoImagenes-qr">
+      <div class="imagenes-qr">
+        <h6>Options Api</h6>
+        <img src="../assets/optionsApi.jpeg" alt="optionsApi" class="imagen">
+      </div>
+
+      <div class="imagenes-qr">
+        <h6>Compositions Api</h6>
+        <img src="../assets/compositionsApi.jpeg" alt="compositionsApi" class="imagen">
+      </div>
     </div>
-    <div class="imagenes-qr">
-      <img src="../assets/optionsApi.jpeg" alt="optionsApi" class="imagen">
-      <img src="../assets/compositionsApi.jpeg" alt="compositionsApi" class="imagen">
-    </div>
-    
+
 
   </q-page>
 </template>
@@ -33,42 +37,44 @@
   src: url('../fonts/Prototype.ttf') format('truetype');
 }
 
-.opcion-qr h1{
-font-family: 'prototype', sans-serif;
-font-size: 4rem;
-font-weight: 100;
-padding: 0 0 0 15px;
-margin: 15px 0px -2px 0px;
+.opcion-qr h1 {
+  font-family: 'prototype', sans-serif;
+  font-size: 4rem;
+  font-weight: 100;
+  padding: 0 0 0 15px;
+  margin: 15px 0px -2px 0px;
 }
 
-.opcion-qr p{
- font-size: 17px;
-    margin: 20px;
-    font-family: sans-serif;
+.opcion-qr p {
+  font-size: 17px;
+  margin: 20px;
+  font-family: sans-serif;
 }
 
-.titles-qr {
+.contenidoImagenes-qr {
   display: flex;
-  justify-content: space-around;
 }
 
-.titles-qr h6 {
-  margin: 2px 0 10px 0;
+.contenidoImagenes-qr h6 {
+  text-align: center;
+  margin: 10px 0 10px 0;
 }
 
 .imagenes-qr {
-    display: flex;
-    justify-items: center;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
 }
 
 .imagenes-qr img {
-    width: 40rem;
-    filter: drop-shadow(2px 4px 6px black);
-    margin-left: 22px;
-    transition: transform 0.3s ease;
+  width: 40rem;
+  height: 20rem;
+  filter: drop-shadow(2px 4px 6px black);
+  margin-left: 22px;
+  transition: transform 0.3s ease;
 }
 
 .imagenes-qr img:hover {
-    transform: scale(1.009);
+  transform: scale(1.009);
 }
 </style>

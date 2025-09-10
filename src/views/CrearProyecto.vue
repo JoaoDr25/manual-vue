@@ -61,6 +61,7 @@
   filter: drop-shadow(2px 4px 6px black);
   /* margin-left: 10px; */
   transition: transform 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .imagenes-qr img:hover {
