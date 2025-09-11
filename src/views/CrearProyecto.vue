@@ -8,25 +8,48 @@
     <ol>
       <li>Lo primero es crear un proyecto Vue con Vite. Ejecuta <code>npm create vite@latest mi-proyecto</code></li>
       <div class="imagenes-qr">
-      <img src="../assets/crearProyecto1.jpeg" alt="crearProyecto1" class="imagen">
-    </div>
-      <li>Selecciona la plantilla <b>Vue</b> o <b>Vue + JavaScript</b>.</li>
-      <li>Instala Quasar con: <code>npm install quasar @quasar/vite-plugin @quasar/extras</code></li>
+        <img src="../assets/crearProyecto1.jpeg" alt="crearProyecto1" class="imagen">
+      </div>
+      <li>Selecciona la plantilla <b>Vue</b> o <b>Vue + JavaScript</b>. </li>
+      <div class="imagenes-qr">
+        <img src="../assets/captura.jpg" alt="seleccionarPlantilla" class="imagen">
+      </div>
+      <li>Luego entra a la carpeta e instala las dependencias iniciales con: <code>npm install</code></li>
+      <div class="imagenes-qr">
+        <img src="../assets/ingresarCarpeta.jpg" alt="ingresarCarpeta" class="imagen">
+      </div>
       <li>Ejecuta <code>npm run dev</code> para iniciar el servidor local.</li>
+      <div class="imagenes-qr">
+        <img src="../assets/ejecutarServidor.jpg" alt="iniciarServidor" class="imagen">
+      </div>
+      <li>La terminal debe mostrar algo como:</li>
+      <div class="imagenes-qr">
+        <img src="../assets/mostrarTerminal.jpg" alt="mostrarTerminal" class="imagen">
+      </div>
     </ol>
-    <p>La estructura básica incluye:</p>
-    <ul>
-      <li><code>main.js</code>: punto de entrada de la aplicación.</li>
-      <li><code>App.vue</code>: componente raíz.</li>
-      <li><code>router/index.js</code>: definición de rutas.</li>
-    </ul>
-    <div>
-      <p>(que es el bundler moderno recomendado).
+    <p>La estructura mínima recomendada debe tener lo siguiente:</p>
 
-        En la consola: </p>
-    </div>
-    
-
+    <pre>
+      │
+      ├─ public/ 
+      │ └─ index.html
+      │
+      ├─ src/
+      │ ├─ assets/
+      │ ├─ components/
+      │ │ └─ EjemploComponente.vue
+      │ ├─ views/
+      │ │ ├─ Home.vue
+      │ │ └─ About.vue
+      │ ├─ router/
+      │ │ └─ index.js
+      │ ├─ App.vue
+      │ └─ main.js
+      │
+      ├─ package.json
+      ├─ vite.config.js
+      └─ README.md
+    </pre>
   </q-page>
 </template>
 
@@ -40,14 +63,13 @@
 .creacion-qr h1 {
   font-family: 'prototype', sans-serif;
   font-size: 4rem;
-  font-weight: 100;
   padding: 0 0 0 15px;
   margin: 15px 0px -2px 0px;
 }
 
 .creacion-qr p {
-  font-family: 'prototype', sans-serif;
-  font-size: 17px;
+  font-family: sans-serif;
+  font-size: 16px;
   margin: 20px;
 }
 

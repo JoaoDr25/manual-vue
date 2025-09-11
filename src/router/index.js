@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Introduccion from '../views/introduccion.vue'
+import Introduccion from '../views/Introduccion.vue'
 
 import InstalacionRequisitos from '../views/Requisitos.vue'
 import InstalacionCrearProyecto from '../views/CrearProyecto.vue'

@@ -6,13 +6,13 @@
       Algunas de las más usadas son:
     </p>
     <ul>
-      <li><code>v-bind</code>: enlaza dinámicamente atributos (ej: imágenes, clases).</li>
-      <li><code>v-if</code>: renderiza condicionalmente un elemento.</li>
-      <li><code>v-for</code>: renderiza listas basadas en un array.</li>
-      <li><code>v-model</code>: enlaza datos bidireccionalmente con inputs.</li>
+      <li><span>v-bind</span>: enlaza dinámicamente atributos (ej: imágenes, clases).</li>
+      <li><span>v-if</span>: renderiza condicionalmente un elemento.</li>
+      <li><span>v-for</span>: renderiza listas basadas en un array.</li>
+      <li><span>v-model</span>: enlaza datos bidireccionalmente con inputs.</li>
     </ul>
     <p>
-      Vue también permite crear <b>directivas personalizadas</b>, aunque la mayoría de casos
+      Vue también permite crear <span>directivas personalizadas</span>, aunque la mayoría de casos
       se resuelven con las directivas integradas.
     </p>
     <div class="imagenes-qr">
@@ -23,40 +23,46 @@
 </template>
 
 <script setup></script>
-<style scoped> 
+<style scoped>
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
 }
 
-.directivas-qr h1{
-font-family: 'prototype', sans-serif;
-font-size: 4rem;
-font-weight: 100;
-padding: 0 0 0 15px;
-margin: 15px 0px -2px 0px;
+.directivas-qr h1 {
+  font-family: 'prototype', sans-serif;
+  font-size: 4rem;
+  padding: 0 0 0 15px;
+  margin: 15px 0px -2px 0px;
 }
 
-.directivas-qr p{
- font-size: 17px;
-    margin: 20px;
-    font-family: sans-serif;
+.directivas-qr p {
+  font-size: 16px;
+  margin: 20px;
+  font-family: sans-serif;
+}
+
+.directivas-qr ul {
+  font-size: 16px;
+}
+
+.directivas-qr span {
+  font-family: 'prototype', sans-serif;
 }
 
 .imagenes-qr {
-    display: flex;
-    justify-items: center;
+  display: flex;
+  justify-items: center;
 }
 
 .imagenes-qr img {
-    width: 40rem;
-    filter: drop-shadow(2px 4px 6px black);
-    margin-left: 22px;
-    transition: transform 0.3s ease;
+  width: 40rem;
+  filter: drop-shadow(2px 4px 6px black);
+  margin-left: 22px;
+  transition: transform 0.3s ease;
 }
 
 .imagenes-qr img:hover {
-    transform: scale(1.009);
+  transform: scale(1.009);
 }
-
 </style>
