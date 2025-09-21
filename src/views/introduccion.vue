@@ -9,19 +9,21 @@
       Vue destaca por su simplicidad, su curva de aprendizaje accesible y su potente ecosistema,
       que incluye librerías como:
     </p>
-    <ul>
+    
+    <div class="main-container">
+      <ul>
       <li><b>Vue Router</b> (navegación)</li>
       <li><b>Pinia</b> (gestión de estado)
         y frameworks UI como </li>
       <li><b>Quasar</b>.</li>
     </ul>
-
-    <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/nhBVL41-_Cw?si=G_GXlvlRFq2bFRRx"
-        title="Vue.js Explained in 100 Seconds" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-      </iframe>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nhBVL41-_Cw?si=G_GXlvlRFq2bFRRx"
+          title="Vue.js Explained in 100 Seconds" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
     </div>
 
   </q-page>
@@ -45,7 +47,7 @@
 
 .introduccion-qr p {
   font-size: 16px;
-  margin: 20px;
+  margin: 20px 80px 10px 20px;
   font-family: sans-serif;
   font-weight: 300;
   text-align: justify;
@@ -54,6 +56,11 @@
 .introduccion-qr ul {
   font-family: sans-serif;
   font-size: 16px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .video-container {
