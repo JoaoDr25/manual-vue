@@ -5,9 +5,9 @@
       Vue ofrece dos formas de escribir componentes:
     </p>
     <ul>
-      <li><b>Options API</b>: basada en secciones como <code>data</code>, <code>methods</code> y <code>computed</code>.
+      <li><span>Options API</span>: Basada en secciones como <span>data</span>, <span>methods</span> y <span>computed</span>.
       </li>
-      <li><b>Composition API</b>: utiliza funciones como <code>ref</code>, <code>reactive</code> y <code>setup</code>
+      <li><span>Composition API</span>: Utiliza funciones como <span>ref</span>, <span>reactive</span> y <span>setup</span>
         para mayor flexibilidad.</li>
     </ul>
     <p>
@@ -40,15 +40,22 @@
 .opcion-qr h1 {
   font-family: 'prototype', sans-serif;
   font-size: 4rem;
-  font-weight: 100;
   padding: 0 0 0 15px;
   margin: 15px 0px -2px 0px;
 }
 
 .opcion-qr p {
-  font-size: 17px;
+  font-size: 16px;
   margin: 20px;
   font-family: sans-serif;
+}
+
+.opcion-qr ul {
+  font-size: 16px;
+}
+
+.opcion-qr span {
+  font-family: 'prototype', sans-serif;
 }
 
 .contenidoImagenes-qr {
@@ -58,6 +65,8 @@
 .contenidoImagenes-qr h6 {
   text-align: center;
   margin: 10px 0 10px 0;
+  font-family: 'prototype', sans-serif;
+  font-size: 18px;
 }
 
 .imagenes-qr {

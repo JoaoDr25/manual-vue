@@ -2,10 +2,10 @@
     <q-page padding class="interpolacion-qr">
         <h1>Interpolación</h1>
         <p>
-            La interpolación en Vue se realiza mediante llaves dobles <code>{{ }}</code>.
+            La interpolación en Vue se realiza mediante llaves dobles <span v-pre>{{ }}</span>.
             Se utiliza para mostrar valores dinámicos en el template.
         </p>
-        <p>Ejemplo: <code>{{ mensaje }}</code> Mostrará el valor de la variable <code>nombre</code>.</p>
+        <p>Ejemplo:<span v-pre> {{ nombre }} </span> mostrará el valor de la variable <span>nombre</span>.</p>
         <p>
             Se pueden hacer operaciones simples dentro de las llaves, aqui hay un ejemplo:
         </p>
@@ -26,15 +26,18 @@
 .interpolacion-qr h1 {
     font-family: 'prototype', sans-serif;
     font-size: 4rem;
-    font-weight: 100;
     padding: 0 0 0 15px;
     margin: 15px 0px -2px 0px;
 }
 
 .interpolacion-qr p {
-    font-size: 17px;
+    font-size: 16px;
     margin: 20px;
     font-family: sans-serif;
+}
+
+.interpolacion-qr span {
+    font-family: 'prototype', sans-serif;
 }
 
 .imagenes-qr {

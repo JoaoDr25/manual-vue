@@ -1,12 +1,12 @@
 <template>
   <q-page padding class="requisitos-qr">
-   <h1>Requisitos de Instalación</h1>
-<ul>
-  <li>Node.js y npm instalados en tu sistema (recomendado: versión LTS).</li>
-  <li>Conocimientos básicos de HTML, CSS y JavaScript moderno.</li>
-  <li>Editor de texto recomendado: Visual Studio Code.</li>
-  <li>Extensiones útiles: Vue Language Features (Volar) y Vue DevTools.</li>
-</ul>
+    <h1>Requisitos de Instalación</h1>
+    <ul>
+      <li><span>Node.js</span> y <span>npm </span>instalados en tu sistema.</li>
+      <li>Conocimientos básicos de <span>HTML</span>, <span>CSS</span> y <span>JavaScript</span> moderno.</li>
+      <li>Editor de texto recomendado: <span>Visual Studio Code.</span></li>
+      <li>Extensiones útiles como: <span>Vue DevTools.</span></li>
+    </ul>
 
   </q-page>
 </template>
@@ -17,17 +17,22 @@
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
 }
-.requisitos-qr h1{
-font-family: 'prototype', sans-serif;
-font-size: 4rem;
-font-weight: 100;
-padding: 0 0 0 15px;
-margin: 15px 0px -2px 0px;
-}
-.requisitos-qr p{
- font-size: 17px;
-    margin: 20px;
-    font-family: sans-serif;
+
+.requisitos-qr h1 {
+  font-family: 'prototype', sans-serif;
+  font-size: 4rem;
+  padding: 0 0 0 15px;
+  margin: 15px 0px -2px 0px;
 }
 
+.requisitos-qr span {
+  font-size: 16px;
+  font-family: 'prototype', sans-serif;
+  text-align: justify;
+}
+
+.requisitos-qr ul {
+  font-size: 16px;
+  font-family: sans-serif;
+}
 </style>
