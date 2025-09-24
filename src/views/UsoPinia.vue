@@ -37,9 +37,11 @@ font-weight: 100;
 padding: 0 0 0 15px;
 margin: 15px 0px -2px 0px;
 }
+
 .titulo-pinia{
    display: flex;
 }
+
 .titulo-pinia img{
  height: 85px;
  margin: 10px 0 0 0;
@@ -104,4 +106,5 @@ margin: 15px 0px -2px 0px;
 .pinia-qr span {
   font-family: 'prototype', sans-serif;
 }
+
 </style>
