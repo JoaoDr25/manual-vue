@@ -17,7 +17,7 @@
           </div>
           <li>Selecciona la plantilla <b>Vue</b> o <b>Vue + JavaScript</b>. </li>
           <div class="imagenes-qr">
-            <img src="../assets/captura.jpg" alt="seleccionarPlantilla" class="imagen">
+            <img src="../assets/Captura.jpg" alt="seleccionarPlantilla" class="imagen">
           </div>
           <li>Luego entra a la carpeta e instala las dependencias iniciales con: <code>npm install</code></li>
           <div class="imagenes-qr">
