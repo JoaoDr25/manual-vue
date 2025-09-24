@@ -1,6 +1,8 @@
 <template>
   <q-page padding class="creacion-qr">
-    <h1>Creación de un Proyecto con Vite</h1>
+    <div class="proyecto-qr">
+      <h1>Creación de un Proyecto con Vite</h1> <img src="../assets/imagen creacion de proyecto.png" alt="imagen de carpeta">
+    </div>
      <p>
           La forma más común de iniciar un proyecto moderno de Vue 3 es utilizando Vite,
           un bundler rápido y ligero.
@@ -66,7 +68,14 @@
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
 }
+.proyecto-qr{
+   display: flex;
+}
+.proyecto-qr img{
+ height: 98px;
+    margin: 14px 0 0px 13px;
 
+}
 .main-container {
   display: flex;
   justify-content: space-between;

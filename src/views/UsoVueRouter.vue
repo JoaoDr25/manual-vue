@@ -1,6 +1,8 @@
 <template>
   <q-page padding class="router-qr">
-    <h1>Vue Router</h1>
+    <div class="logo-qr">
+      <h1>Vue Router</h1><img src="../assets/image-libreria.png" alt="logo de libreria">
+    </div>
     <p>
       Vue Router es la librería oficial de enrutamiento para Vue.
       Permite crear aplicaciones de una sola página <span>(SPA)</span> con múltiples vistas.
@@ -21,6 +23,14 @@
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
 }
+.logo-qr{
+   display: flex;
+}
+.logo-qr img{
+ height: 140px;
+ margin: -17px 0px 6px -19px;
+
+}
 
 .router-qr h1 {
   font-family: 'prototype', sans-serif;
@@ -31,7 +41,7 @@
 
 .router-qr p {
   font-size: 16px;
-  margin: 20px;
+  margin: -10px 0 0 20px;
   font-family: sans-serif;
 }
 

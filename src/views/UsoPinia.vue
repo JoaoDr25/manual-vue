@@ -29,7 +29,7 @@
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
 }
-<<<<<<< HEAD
+
 .titulo-pinia h1{
 font-family: 'prototype', sans-serif;
 font-size: 4rem;
@@ -54,14 +54,14 @@ margin: 15px 0px -2px 0px;
  font-size: 17px;
     margin: 4px 0 0 20px;
     font-family: sans-serif;
-=======
+}
 
 .pinia-qr h1 {
   font-family: 'prototype', sans-serif;
   font-size: 4rem;
   padding: 0 0 0 15px;
   margin: 15px 0px -2px 0px;
->>>>>>> ad57db4c5534acc766a122ab7ddd7a6c9c4be5fb
+
 }
 
 .pinia-qr h6 {
