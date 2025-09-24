@@ -1,6 +1,9 @@
 <template>
   <q-page class="introduccion-qr">
-    <h1>Introducción a Vue.js</h1>
+    <div class="logo-vue">
+      <h1>Introducción </h1> <img src="../assets/logo vue.png" alt="logo vue">
+
+    </div>
     <p>
       Vue.js es un framework progresivo de JavaScript para construir interfaces de usuario.
       Su principal ventaja es que puedes adoptarlo de forma incremental: puedes usarlo solo para
@@ -36,6 +39,14 @@
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
+}
+.logo-vue{
+   display: flex;
+}
+.logo-vue img{
+   height: 85px;
+ margin: 24px 0 0 10px;
+
 }
 
 .introduccion-qr h1 {

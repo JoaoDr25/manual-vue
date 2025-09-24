@@ -1,6 +1,8 @@
 <template>
   <q-page padding class="requisitos-qr">
-    <h1>Requisitos de Instalación</h1>
+    <div class="logo-qr">
+      <h1>Requisitos de Instalación</h1> <img src="../assets/img instalacion.png" alt="logo de instalacion">
+    </div>
     <ul>
       <li><span>Node.js</span> y <span>npm </span>instalados en tu sistema.</li>
       <li>Conocimientos básicos de <span>HTML</span>, <span>CSS</span> y <span>JavaScript</span> moderno.</li>
@@ -16,6 +18,14 @@
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
+}
+.logo-qr{
+   display: flex;
+}
+.logo-qr img{
+ height: 98px;
+    margin: 22px 0 0px 20px;
+
 }
 
 .requisitos-qr h1 {
