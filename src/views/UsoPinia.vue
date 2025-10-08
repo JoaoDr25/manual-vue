@@ -36,19 +36,43 @@ font-weight: 100;
 padding: 0 0 0 15px;
 margin: 15px 0px -2px 0px;
 }
+
 .titulo-pinia{
    display: flex;
 }
+
 .titulo-pinia img{
  height: 85px;
  margin: 10px 0 0 0;
-
-
 }
+
+.titulo-pinia h1 {
+  font-family: 'prototype', sans-serif;
+  font-size: 4rem;
+  font-weight: 100;
+  padding: 0 0 0 15px;
+  margin: 15px 0px -2px 0px;
+}
+
+.titulo-pinia {
+  display: flex;
+}
+
+.titulo-pinia img {
+  height: 85px;
+  margin: 10px 0 0 0;
+}
+
 /* .pinia-qr ul{ 
   font-family: sans-serif;
-
 } */
+
+.pinia-qr p {
+  font-size: 17px;
+  margin: 4px 0 0 20px;
+  font-family: sans-serif;
+}
+
 .pinia-qr p{
  font-size: 17px;
     margin: 4px 0 0 20px;
@@ -60,13 +84,11 @@ margin: 15px 0px -2px 0px;
   font-size: 4rem;
   padding: 0 0 0 15px;
   margin: 15px 0px -2px 0px;
-
-} 
-
+}
 .pinia-qr h6 {
-    font-family: 'prototype', sans-serif;
-    margin: 15px 0px -2px 22px;
-    font-size: 16px;
+  font-family: 'prototype', sans-serif;
+  margin: 15px 0px -2px 22px;
+  font-size: 16px;
 }
 
 .pinia-qr p {
@@ -82,4 +104,5 @@ margin: 15px 0px -2px 0px;
 .pinia-qr span {
   font-family: 'prototype', sans-serif;
 }
+
 </style>

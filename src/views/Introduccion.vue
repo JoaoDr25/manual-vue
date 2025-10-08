@@ -97,4 +97,5 @@ Funciona con tecnologías como Vite, Vue CLI, Pinia (gestor de estado) y Vue Rou
   filter: drop-shadow(2px 4px 6px black);
   margin-left: 22px;
 }
+
 </style>
