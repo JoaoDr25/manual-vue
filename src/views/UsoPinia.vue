@@ -4,7 +4,8 @@
       <h1>Pinia</h1> <img src="../assets/image-removebg-preview.png" alt="foto pinia">
     </div>
     <p>
-      Pinia es una librería de almacenes para Vue que te permite compartir el estado entre los distintos componentes/páginas. Si estás familiarizado con la API de composición probablemente estarás pensando que ya puedes compartir un estado global con un simple export const state = reactive({}). Esto es cierto para aplicaciones de una sola página (SPA) pero expone to aplicación a vulnerabilidades de seguridad si es renderizada en el lado del servidor. Pero incluso en aplicaciones de una sola página pequeñas obtienes mucho al usar Pinia:
+      Pinia es la librería recomendada para la gestión de estado en Vue 3.
+      Reemplaza a Vuex con una API más simple y clara.
     </p>
     <h6>
       Cada store en Pinia:
@@ -18,6 +19,20 @@
       Los stores se pueden usar en cualquier componente y también soportan persistencia
       y tipado con TypeScript.
     </p>
+    <h6>
+      Ejemplo básico:
+    </h6>
+      <div class="contenidoImagenes-qr">
+      <div class="imagenes-qr">
+        <p>Así es como se ve usar Pinia en términos de API. Se tiene que empezar creando un almacén:</p>
+        <img src="../assets/pinia01.JPG" alt="Pinia Store" class="imagen">
+      </div>
+
+      <div class="imagenes-qr">
+        <p>Y luego usarla en un componente:</p>
+        <img src="../assets/pinia02.JPG" alt="Pinia Store" class="imagen">
+      </div>
+    </div>
 
   </q-page>
 </template>
@@ -103,6 +118,36 @@ margin: 15px 0px -2px 0px;
 
 .pinia-qr span {
   font-family: 'prototype', sans-serif;
+}
+
+.imagenes-qr {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.imagenes-qr img {
+  width: 40rem;
+  height: 20rem;
+  filter: drop-shadow(2px 4px 6px black);
+  margin-left: 22px;
+  transition: transform 0.3s ease;
+}
+
+.imagenes-qr img:hover {
+  transform: scale(1.009);
+}
+
+.contenidoImagenes-qr {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.contenidoImagenes-qr p {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  font-family: 'prototype', sans-serif;
+  font-size: 15px;
 }
 
 </style>

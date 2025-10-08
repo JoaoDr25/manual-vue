@@ -17,6 +17,7 @@ puedes usarlo para una sola parte de tu sitio web o para desarrollar aplicacione
       </div>
     <div class="main-container">
       <ul>
+
         <li><b>Reactividad</b>:  Vue.js utiliza un sistema de reactividad que actualiza automáticamente la interfaz de usuario cuando cambian los datos.</li>
     <li><b>Arquitectura basada en componentes</b>: Todo en Vue se organiza en componentes reutilizables, lo que mejora la mantenibilidad y escalabilidad de los proyectos.</li>
     <li><b>Curva de aprendizaje suave</b>: Está diseñado para ser fácil de aprender si ya conoces HTML, CSS y JavaScript.</li>
@@ -26,6 +27,7 @@ puedes usarlo para una sola parte de tu sitio web o para desarrollar aplicacione
 Funciona con tecnologías como Vite, Vue CLI, Pinia (gestor de estado) y Vue Router (enrutamiento).
 
 </ul>
+
       <div class="video-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/nhBVL41-_Cw?si=G_GXlvlRFq2bFRRx"
           title="Vue.js Explained in 100 Seconds" frameborder="0"
