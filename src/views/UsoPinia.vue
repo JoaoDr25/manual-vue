@@ -4,8 +4,7 @@
       <h1>Pinia</h1> <img src="../assets/image-removebg-preview.png" alt="foto pinia">
     </div>
     <p>
-      Pinia es la librería recomendada para la gestión de estado en Vue 3.
-      Reemplaza a Vuex con una API más simple y clara.
+      Pinia es una librería de almacenes para Vue que te permite compartir el estado entre los distintos componentes/páginas. Si estás familiarizado con la API de composición probablemente estarás pensando que ya puedes compartir un estado global con un simple export const state = reactive({}). Esto es cierto para aplicaciones de una sola página (SPA) pero expone to aplicación a vulnerabilidades de seguridad si es renderizada en el lado del servidor. Pero incluso en aplicaciones de una sola página pequeñas obtienes mucho al usar Pinia:
     </p>
     <h6>
       Cada store en Pinia:
@@ -62,7 +61,7 @@ margin: 15px 0px -2px 0px;
   padding: 0 0 0 15px;
   margin: 15px 0px -2px 0px;
 
-}
+} 
 
 .pinia-qr h6 {
     font-family: 'prototype', sans-serif;
