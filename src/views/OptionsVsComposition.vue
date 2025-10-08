@@ -73,6 +73,7 @@
   display: flex;
   justify-items: center;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .imagenes-qr img {
