@@ -5,19 +5,22 @@
 
     </div>
     <p>
-      Vue.js es un framework progresivo de JavaScript para construir interfaces de usuario.
-      Su principal ventaja es que puedes adoptarlo de forma incremental: puedes usarlo solo para
-      una parte de tu aplicación, o bien construir proyectos grandes y complejos con él.
+     Vue.js es un framework progresivo de JavaScript diseñado para construir interfaces de usuario interactivas y aplicaciones web de manera sencilla, rápida y escalable.
+Su principal objetivo es facilitar el desarrollo frontend mediante un enfoque reactivo, modular y componentizado.
 
-      Vue destaca por su simplicidad, su curva de aprendizaje accesible y su potente ecosistema,
-      que incluye librerías como:
+A diferencia de otros frameworks más complejos, Vue se adapta progresivamente:
+puedes usarlo para una sola parte de tu sitio web o para desarrollar aplicaciones web completas tipo SPA (Single Page Application).
     </p>
-    
+
+     <div class="main-title">
+        <h3> Características</h3>
+      </div>
     <div class="main-container">
       <ul>
       <li><b>Vue Router</b> (navegación)</li>
       <li><b>Pinia</b> (gestión de estado)
-        y frameworks UI como <b>Quasar.</b></li>
+        y frameworks UI como </li>
+      <li><b>Quasar</b>.</li>
     </ul>
       <div class="video-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/nhBVL41-_Cw?si=G_GXlvlRFq2bFRRx"
@@ -51,8 +54,14 @@
 .introduccion-qr h1 {
   font-family: 'prototype', sans-serif;
   font-size: 4rem;
-  padding: 0 0 0 15px;
-  margin: 15px 0px -2px 0px;
+ margin: 15px 0px -2px 15px;
+}
+.main-title h3 {
+  font-family: 'prototype', sans-serif;
+  font-size: 30PX;
+   margin: 15px 0px -2px 15px;
+  
+ 
 }
 
 .introduccion-qr p {
@@ -71,8 +80,14 @@
 .main-container {
   display: flex;
   justify-content: space-between;
+  margin-right: 85px;
 }
+.main-container h2 {
+  font-size: 25px;
+  margin-left: 20px;
 
+
+}
 .video-container {
   width: 40rem;
   filter: drop-shadow(2px 4px 6px black);
