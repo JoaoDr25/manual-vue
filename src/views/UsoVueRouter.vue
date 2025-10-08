@@ -4,7 +4,7 @@
       <h1>Vue Router</h1><img src="../assets/image-libreria.png" alt="logo de libreria">
     </div>
     <p>
-      Vue Router es la librería oficial de enrutamiento para Vue.
+      Vue Router es una biblioteca oficial de Vue.js que proporciona un sistema de enrutamiento para aplicaciones Vue. Permite a los desarrolladores definir rutas y componentes asociados.
       Permite crear aplicaciones de una sola página <span>(SPA)</span> con múltiples vistas.
     </p>
     <ul>
@@ -13,6 +13,13 @@
       <li>Soporta <span>parámetros dinámicos</span> como <span>/user/:id</span>.</li>
       <li>Permite <span>rutas anidadas</span> y <span>guards</span> para controlar el acceso.</li>
     </ul>
+    <h6>
+      Configuración básica de enrutamiento:
+    </h6>
+    <p>
+      Para utilizar Vue Router, primero debemos instalarlo. Si estás utilizando Vue CLI, puedes agregar Vue Router durante la creación del proyecto. Si ya tienes un proyecto Vue.js existente, puedes agregar Vue Router con el siguiente comando:
+    </p>
+    <img src="../assets/vueRouterInstalacion.JPG" alt="Pinia Store" class="imagen">
 
   </q-page>
 </template>
@@ -37,6 +44,12 @@
   font-size: 4rem;
   padding: 0 0 0 15px;
   margin: 15px 0px -2px 0px;
+}
+
+.router-qr h6 {
+  font-family: 'prototype', sans-serif;
+  margin: 15px 0px -2px 22px;
+  font-size: 16px;
 }
 
 .router-qr p {

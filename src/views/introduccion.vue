@@ -17,8 +17,7 @@
       <ul>
       <li><b>Vue Router</b> (navegación)</li>
       <li><b>Pinia</b> (gestión de estado)
-        y frameworks UI como </li>
-      <li><b>Quasar</b>.</li>
+        y frameworks UI como <b>Quasar.</b></li>
     </ul>
       <div class="video-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/nhBVL41-_Cw?si=G_GXlvlRFq2bFRRx"
