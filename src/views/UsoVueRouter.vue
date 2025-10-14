@@ -22,9 +22,9 @@
       durante la creación del proyecto. Si ya tienes un proyecto Vue.js existente, puedes agregar Vue Router con el
       siguiente comando:
     </p>
-    <div class="imagen-qr">
+    <!-- <div class="imagen-qr">
       <img src="../assets/vueRouterInstalacion.JPG" alt="Vue Router Instalación" class="imagen">
-    </div>
+    </div> -->
     <br>
     <div class="bloque-qr">
       <div>
@@ -46,13 +46,13 @@
           (/lista-productos). Cada ruta está asociada a un componente Vue, que se renderizará cuando se visite la ruta.
         </p>
       </div>
-      <div class="imagenes-qr">
+      <!-- <div class="imagenes-qr">
         <img src="../assets/vueRouterConfiguracion.JPG" alt="Vue Router Configuración" class="imagen">
-      </div>
+      </div> -->
     </div>
     <div class="bloque02-qr">
       <div class="parte01-qr">
-        <div>
+        <div class="subparte01-qr">
           <h6>
             Enrutamiento dinámico:
           </h6>
@@ -61,11 +61,11 @@
             parámetros. Esto es útil cuando tienes una ruta que depende de algún tipo de dato, como un ID de producto.
             Aquí tienes un ejemplo de cómo configurar el enrutamiento dinámico:
           </p>
-          <div class="imagens-qr">
+          <!-- <div class="imagens-qr">
             <img src="../assets/vueRouterEnrutamiento.JPG" alt="Vue Router Enrutamiento Dinámico" class="imagen">
-          </div>
+          </div> -->
         </div>
-        <div>
+        <div class="subparte02-qr">
           <h6>
             Enrutamiento anidado:
           </h6>
@@ -75,13 +75,13 @@
             tu aplicación que tiene su propia subnavegación. Aquí tienes un ejemplo de cómo configurar el enrutamiento
             anidado:
           </p>
-          <div class="imagens-qr">
+          <!-- <div class="imagens-qr">
             <img src="../assets/vueRouterEnrutamiento02.JPG" alt="vue Router Enrutamiento Anidado" class="imagen">
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="parte02-qr">
-        <div>
+        <div class="subparte01-qr">
           <h6>
             Redirecciones:
           </h6>
@@ -89,11 +89,11 @@
             Vue Router también te permite configurar redirecciones. Esto es útil cuando quieres que una ruta específica
             redirija a otra ruta. Aquí tienes un ejemplo de cómo configurar una redirección:
           </p>
-          <div class="imagens-qr">
+          <!-- <div class="imagens-qr">
             <img src="../assets/vueRouterRedireccion.JPG" alt="vue Router Redirecciones" class="imagen">
-          </div>
+          </div> -->
         </div>
-        <div>
+        <div class="subparte02-qr">
           <h6>
             Navegación programática:
           </h6>
@@ -102,9 +102,9 @@
             método
             push del router para navegar a una ruta específica. Aquí tienes un ejemplo de cómo hacerlo:
           </p>
-          <div class="imagens-qr">
+          <!-- <div class="imagens-qr">
             <img src="../assets/vueRouterNavegacion.JPG" alt="vue Router Navegacion Programática" class="imagen">
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="conclusion-qr">
@@ -143,83 +143,84 @@
   font-family: 'prototype', sans-serif;
   font-size: 4rem;
   padding: 0 0 0 15px;
-  margin: 15px 0px -2px 0px;
+  margin: 20px 60px 10px 32px;
 }
 
 .router-qr h6 {
   font-family: 'prototype', sans-serif;
-  margin: 15px 0px -2px 22px;
-  font-size: 16px;
+  margin: 20px 60px 10px 50px;
+  font-size: 18px;
   padding-bottom: 10px;
 }
 
 .router-qr p {
-  font-size: 16px;
-  margin: 0 80px 0 20px;
+  font-size: 0.96rem;
+  margin: 20px 60px 10px 50px;
   font-family: sans-serif;
   padding-bottom: 10px;
   text-align: justify;
 }
 
 .router-qr ul {
-  font-size: 16px;
+  font-size: 0.96rem;
+  margin: 20px 60px 10px 50px;
 }
 
 .router-qr span {
   font-family: 'prototype', sans-serif;
 }
 
-.imagen-qr {
+/* .imagen-qr {
   margin-bottom: 10px;
-}
+} */
 
-.imagen-qr img {
+/* .imagen-qr img {
   height: 60px;
   filter: drop-shadow(1px 2px 3px black);
   margin-left: 22px;
   transition: transform 0.3s ease;
-}
+} */
 
-.imagen-qr img:hover {
+/* .imagen-qr img:hover {
   transform: scale(1.009);
-}
+} */
 
-.imagens-qr {
+/* .imagens-qr {
   display: flex;
   justify-items: center;
   flex-direction: column;
-}
+} */
 
-.imagens-qr img {
+/* .imagens-qr img {
   width: 40rem;
   height: 20rem;
   filter: drop-shadow(2px 4px 6px black);
   margin-left: 22px;
   transition: transform 0.3s ease;
-}
+} */
 
-.imagens-qr img:hover {
+/* .imagens-qr img:hover {
   transform: scale(1.009);
-}
+} */
 
-.imagenes-qr {
+/* .imagenes-qr {
   display: flex;
   justify-items: center;
   flex-direction: column;
-}
+} */
 
-.imagenes-qr img {
+/* .imagenes-qr img {
   width: 29rem;
   height: 25rem;
   filter: drop-shadow(2px 4px 6px black);
   margin-left: 22px;
   transition: transform 0.3s ease;
   padding-bottom: 10px;
-}
+} */
 
-.imagenes-qr img:hover {
+/* .imagenes-qr img:hover {
   transform: scale(1.009);
-}
+} */
 
 .bloque-qr {
   display: flex;
@@ -256,5 +257,49 @@
   margin: 10px 0 10px 0;
   font-family: 'prototype', sans-serif;
   font-size: 18px;
+}
+
+.subparte01-qr {
+  width: 50%;
+}
+
+.subparte02-qr {
+  width: 50%;
+}
+
+.code-terminal {
+    background: #1e1e1e;
+    color: #e8e8e8;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-family: 'Fira Code', monospace;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    margin: 10px 52px 10px 50px;
+    overflow-x: auto;
+    cursor: pointer
+}
+
+.code-header {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red {
+    background: #ff5f56;
+}
+
+.yellow {
+    background: #ffbd2e;
+}
+
+.green {
+    background: #27c93f;
 }
 </style>

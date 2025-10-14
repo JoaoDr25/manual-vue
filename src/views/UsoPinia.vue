@@ -23,15 +23,15 @@
       Ejemplo básico:
     </h6>
       <div class="contenidoImagenes-qr">
-      <div class="imagenes-qr">
+      <!-- <div class="imagenes-qr">
         <p>Así es como se ve usar Pinia en términos de API. Se tiene que empezar creando un almacén:</p>
         <img src="../assets/pinia01.JPG" alt="Pinia Store" class="imagen">
-      </div>
+      </div> -->
 
-      <div class="imagenes-qr">
+      <!-- <div class="imagenes-qr">
         <p>Y luego usarla en un componente:</p>
         <img src="../assets/pinia02.JPG" alt="Pinia Store" class="imagen">
-      </div>
+      </div> -->
     </div>
 
   </q-page>
@@ -49,7 +49,7 @@ font-family: 'prototype', sans-serif;
 font-size: 4rem;
 font-weight: 100;
 padding: 0 0 0 15px;
-margin: 15px 0px -2px 0px;
+margin: 20px 60px 10px 32px;
 }
 
 .titulo-pinia{
@@ -61,82 +61,51 @@ margin: 15px 0px -2px 0px;
  margin: 10px 0 0 0;
 }
 
-.titulo-pinia h1 {
-  font-family: 'prototype', sans-serif;
-  font-size: 4rem;
-  font-weight: 100;
-  padding: 0 0 0 15px;
-  margin: 15px 0px -2px 0px;
+.pinia-qr ul { 
+  font-size: 0.96rem;
+  margin: 20px 60px 10px 50px;
 }
-
-.titulo-pinia {
-  display: flex;
-}
-
-.titulo-pinia img {
-  height: 85px;
-  margin: 10px 0 0 0;
-}
-
-/* .pinia-qr ul{ 
-  font-family: sans-serif;
-} */
 
 .pinia-qr p {
-  font-size: 17px;
+  font-size: 0.96rem;
   margin: 4px 0 0 20px;
   font-family: sans-serif;
-}
-
-.pinia-qr p{
- font-size: 17px;
-    margin: 4px 0 0 20px;
-    font-family: sans-serif;
+  margin: 20px 60px 10px 50px;
 }
 
 .pinia-qr h1 {
   font-family: 'prototype', sans-serif;
   font-size: 4rem;
   padding: 0 0 0 15px;
-  margin: 15px 0px -2px 0px;
 }
+
 .pinia-qr h6 {
   font-family: 'prototype', sans-serif;
-  margin: 15px 0px -2px 22px;
-  font-size: 16px;
-}
-
-.pinia-qr p {
-  font-size: 16px;
-  margin: 20px;
-  font-family: sans-serif;
-}
-
-.pinia-qr ul {
-  font-size: 16px;
+  margin: 20px 60px 10px 50px;
+  font-size: 0.96rem;
 }
 
 .pinia-qr span {
   font-family: 'prototype', sans-serif;
 }
 
-.imagenes-qr {
+/* .imagenes-qr {
   display: flex;
   justify-items: center;
   flex-direction: column;
-}
+} */
 
-.imagenes-qr img {
+/* .imagenes-qr img {
   width: 40rem;
   height: 20rem;
   filter: drop-shadow(2px 4px 6px black);
   margin-left: 22px;
   transition: transform 0.3s ease;
-}
+} */
 
-.imagenes-qr img:hover {
+/* .imagenes-qr img:hover {
   transform: scale(1.009);
-}
+} */
 
 .contenidoImagenes-qr {
   display: flex;
@@ -148,6 +117,42 @@ margin: 15px 0px -2px 0px;
   margin: 10px 0 10px 0;
   font-family: 'prototype', sans-serif;
   font-size: 15px;
+}
+
+.code-terminal {
+    background: #1e1e1e;
+    color: #e8e8e8;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-family: 'Fira Code', monospace;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    margin: 10px 52px 10px 50px;
+    overflow-x: auto;
+    cursor: pointer
+}
+
+.code-header {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red {
+    background: #ff5f56;
+}
+
+.yellow {
+    background: #ffbd2e;
+}
+
+.green {
+    background: #27c93f;
 }
 
 </style>

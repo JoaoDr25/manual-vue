@@ -27,18 +27,19 @@
   font-family: 'prototype', sans-serif;
   font-size: 4rem;
   padding: 0 0 0 15px;
-  margin: 15px 0px -2px 0px;
+  margin: 20px 60px 10px 32px;
 }
 
 .recursos-qr p {
-  font-size: 16px;
-  margin: 20px;
+  font-size: 0.96rem;
+  margin: 20px 60px 10px 50px;
   font-family: sans-serif;
 }
 
 .recursos-qr ul {
-  font-size: 16px;
+  font-size: 0.96rem;
   font-family: 'prototype', sans-serif;
+  margin: 20px 60px 10px 50px;
 }
 
 .recursos-qr span {

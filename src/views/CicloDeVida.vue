@@ -14,8 +14,20 @@
       Permiten ejecutar lógica en momentos específicos, como obtener datos de una API
       o limpiar recursos.
     </p>
-    <div class="imagenes-qr">
+    <!-- <div class="imagenes-qr">
       <img src="../assets/lifeCycle.jpeg" alt="lifeCycle" class="imagen">
+    </div> -->
+        <div class="-qr">
+      <p>También se puede usar interpolación para enlazar atributos dinámicos:</p>
+
+      <div class="code-terminal">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <pre><code></code></pre>
+      </div>
     </div>
 
   </q-page>
@@ -32,36 +44,73 @@
   font-family: 'prototype', sans-serif;
   font-size: 4rem;
   padding: 0 0 0 15px;
-  margin: 15px 0px -2px 0px;
+  margin: 20px 60px 10px 32px;
 }
 
 .ciclo-qr p {
-  font-size: 16px;
-  margin: 20px;
+  font-size: 0.96rem;
+  margin: 20px 60px 10px 50px;
   font-family: sans-serif;
 }
 
 .ciclo-qr ul {
-  font-size: 16px;
+  font-size: 0.96rem;
+  margin: 20px 60px 10px 50px;
 }
 
 .ciclo-qr span {
   font-family: 'prototype', sans-serif;
 }
 
-.imagenes-qr {
+/* .imagenes-qr {
   display: flex;
   justify-items: center;
-}
+} */
 
-.imagenes-qr img {
+/* .imagenes-qr img {
   width: 40rem;
   filter: drop-shadow(2px 4px 6px black);
   margin-left: 22px;
   transition: transform 0.3s ease;
+} */
+
+/* .imagenes-qr img:hover {
+  transform: scale(1.009);
+} */
+
+ .code-terminal {
+    background: #1e1e1e;
+    color: #e8e8e8;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-family: 'Fira Code', monospace;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    margin: 10px 52px 10px 50px;
+    overflow-x: auto;
+    cursor: pointer
 }
 
-.imagenes-qr img:hover {
-  transform: scale(1.009);
+.code-header {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red {
+    background: #ff5f56;
+}
+
+.yellow {
+    background: #ffbd2e;
+}
+
+.green {
+    background: #27c93f;
 }
 </style>

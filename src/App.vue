@@ -18,6 +18,4 @@ import BarraNavegacion from './components/barraNavegacion.vue';
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');}
-
-
 </style>
