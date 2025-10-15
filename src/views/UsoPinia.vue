@@ -22,17 +22,76 @@
     <h6>
       Ejemplo básico:
     </h6>
-      <div class="contenidoImagenes-qr">
-      <!-- <div class="imagenes-qr">
+    <!-- <div class="contenidoImagenes-qr">
+      <div class="imagenes-qr">
         <p>Así es como se ve usar Pinia en términos de API. Se tiene que empezar creando un almacén:</p>
         <img src="../assets/pinia01.JPG" alt="Pinia Store" class="imagen">
-      </div> -->
+      </div>
 
-      <!-- <div class="imagenes-qr">
+      <div class="imagenes-qr">
         <p>Y luego usarla en un componente:</p>
         <img src="../assets/pinia02.JPG" alt="Pinia Store" class="imagen">
-      </div> -->
+      </div>
+    </div> -->
+
+    <div class="main-qr">
+  <div class="first-qr">
+    <div class="code-terminal">
+      <div class="code-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <pre><code>
+import { defineStore } from 'pinia'
+
+export const useCounterStore = defineStore('counter', {
+  state: () =&gt; {
+    return { count: 0 }
+  },
+
+  // también se puede definir como
+  // state: () =&gt; ({ count: 0 })
+  
+  actions: {
+    increment() {
+      this.count++
+    }
+  }
+})
+      </code></pre>
     </div>
+  </div>
+
+  <div class="second-qr">
+    <div class="code-terminal">
+      <div class="code-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <pre><code>
+&lt;script setup&gt;
+import { useCounterStore } from '@stores/counter'
+
+const counter = useCounterStore()
+
+counter.count++
+// con autocompletado ✨
+counter.$patch({ count: counter.count + 1 })
+// o usando una acción en su lugar
+counter.increment()
+&lt;/script&gt;
+
+&lt;template&gt;
+&lt;!-- Accede al estado desde el almacén directamente --&gt;
+&lt;div&gt;Current Count: &#123;&#123; counter.count &#125;&#125;&lt;/div&gt;
+&lt;/template&gt;
+      </code></pre>
+    </div>
+  </div>
+</div>
+
 
   </q-page>
 </template>
@@ -44,24 +103,24 @@
   src: url('../fonts/Prototype.ttf') format('truetype');
 }
 
-.titulo-pinia h1{
-font-family: 'prototype', sans-serif;
-font-size: 4rem;
-font-weight: 100;
-padding: 0 0 0 15px;
-margin: 20px 60px 10px 32px;
+.titulo-pinia h1 {
+  font-family: 'prototype', sans-serif;
+  font-size: 4rem;
+  font-weight: 100;
+  padding: 0 0 0 15px;
+  margin: 20px 60px 10px 32px;
 }
 
-.titulo-pinia{
-   display: flex;
+.titulo-pinia {
+  display: flex;
 }
 
-.titulo-pinia img{
- height: 85px;
- margin: 10px 0 0 0;
+.titulo-pinia img {
+  height: 85px;
+  margin: 10px 0 0 0;
 }
 
-.pinia-qr ul { 
+.pinia-qr ul {
   font-size: 0.96rem;
   margin: 20px 60px 10px 50px;
 }
@@ -120,39 +179,51 @@ margin: 20px 60px 10px 32px;
 }
 
 .code-terminal {
-    background: #1e1e1e;
-    color: #e8e8e8;
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    font-family: 'Fira Code', monospace;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    margin: 10px 52px 10px 50px;
-    overflow-x: auto;
-    cursor: pointer
+  background: #1e1e1e;
+  color: #e8e8e8;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-family: 'Fira Code', monospace;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin: 10px 52px 10px 50px;
+  overflow-x: auto;
+  cursor: pointer
 }
 
 .code-header {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 0.5rem;
+  display: flex;
+  gap: 6px;
+  margin-bottom: 0.5rem;
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }
 
 .red {
-    background: #ff5f56;
+  background: #ff5f56;
 }
 
 .yellow {
-    background: #ffbd2e;
+  background: #ffbd2e;
 }
 
 .green {
-    background: #27c93f;
+  background: #27c93f;
 }
 
+.main-qr {
+  display: flex;
+}
+
+.first-qr {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.second-qr {
+  width: 50%;
+}
 </style>

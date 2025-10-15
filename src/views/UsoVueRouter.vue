@@ -17,24 +17,40 @@
     <h6>
       Configuración básica de enrutamiento:
     </h6>
-    <p>
+    
+    <!-- <div class="imagen-qr">
+      <img src="../assets/vueRouterInstalacion.JPG" alt="Vue Router Instalación" class="imagen">
+    </div> -->
+
+    <br>
+    <div class="bloque-qr" style="width: 100%;">
+
+      <div style="width: 50%;">
+
+      <p>
       Para utilizar Vue Router, primero debemos instalarlo. Si estás utilizando Vue CLI, puedes agregar Vue Router
       durante la creación del proyecto. Si ya tienes un proyecto Vue.js existente, puedes agregar Vue Router con el
       siguiente comando:
     </p>
-    <!-- <div class="imagen-qr">
-      <img src="../assets/vueRouterInstalacion.JPG" alt="Vue Router Instalación" class="imagen">
-    </div> -->
-    <br>
-    <div class="bloque-qr">
-      <div>
+
+
+         <div class="code-terminal" style="display: flex; padding-bottom: 0; margin-bottom: 40px; margin-top: 30px;">
+      <div class="code-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <pre style="margin: 0;"><code>
+            npm install vue-router
+          </code></pre>
+    </div>
+
         <p>
           Una vez instalado Vue Router, necesitamos configurarlo. Aquí es donde definimos las rutas de nuestra
           aplicación.
           Cada ruta se mapea a un componente Vue.js. Cuando esa ruta es visitada en el navegador, el componente
           correspondiente se renderiza.
         </p>
-        <br>
         <p>
           Para configurar el enrutamiento en Vue, primero debes importar <span>createRouter </span> de
           <span>vue-router</span>. Luego,
@@ -49,7 +65,42 @@
       <!-- <div class="imagenes-qr">
         <img src="../assets/vueRouterConfiguracion.JPG" alt="Vue Router Configuración" class="imagen">
       </div> -->
+
+      <div class="code-terminal">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <pre style="margin-bottom: 0;"><code>
+&lt;script setup&gt;
+import { createRouter, createWebHistory } from 'vue-router'
+import VistaInicio from './views/VistaInicio.vue'
+import VistaListaProductos from './views/VistaListaProductos.vue'
+
+// Creación del router
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/',
+      name: 'inicio',
+      component: VistaInicio
+    },
+    {
+      path: '/lista-productos',
+      name: 'lista-productos',
+      component: VistaListaProductos
+    }
+  ]
+})
+&lt;/script&gt;
+
+          </code></pre>
+      </div>
+
     </div>
+
     <div class="bloque02-qr">
       <div class="parte01-qr">
         <div class="subparte01-qr">
@@ -64,6 +115,33 @@
           <!-- <div class="imagens-qr">
             <img src="../assets/vueRouterEnrutamiento.JPG" alt="Vue Router Enrutamiento Dinámico" class="imagen">
           </div> -->
+
+          <div class="code-terminal">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <pre><code>
+&lt;script setup&gt;
+import { createRouter, createWebHistory } from 'vue-router'
+import VistaProducto from './views/VistaProducto.vue'
+
+// Creación del router con ruta dinámica
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/producto/:id',
+      name: 'producto',
+      component: VistaProducto
+    }
+  ]
+})
+&lt;/script&gt;
+          </code></pre>
+          </div>
+
         </div>
         <div class="subparte02-qr">
           <h6>
@@ -78,7 +156,38 @@
           <!-- <div class="imagens-qr">
             <img src="../assets/vueRouterEnrutamiento02.JPG" alt="vue Router Enrutamiento Anidado" class="imagen">
           </div> -->
+          <div class="code-terminal">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <pre><code>
+const router = createRouter({
+  routes: [
+    {
+      path: '/producto/:id',
+      name: 'producto',
+      component: VistaProducto,
+      children: [
+        {
+          path: 'reseñas',
+          component: ReseñasProducto
+        },
+        {
+          path: 'variaciones',
+          component: VariacionesProducto
+        }
+      ]
+    }
+  ]
+})
+&lt;/script&gt;
+          </code></pre>
+          </div>
         </div>
+
+
       </div>
       <div class="parte02-qr">
         <div class="subparte01-qr">
@@ -92,6 +201,33 @@
           <!-- <div class="imagens-qr">
             <img src="../assets/vueRouterRedireccion.JPG" alt="vue Router Redirecciones" class="imagen">
           </div> -->
+
+          <div class="code-terminal">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <pre><code>
+const router = createRouter({
+  routes: [
+    {
+      path: '/',
+      name: 'inicio',
+      redirect: to => ({ path: '/lista-productos' })
+    },
+    {
+      path: '/lista-productos',
+      name: 'lista-productos',
+      component: VistaListaProductos
+    }
+  ]
+})
+&lt;/script&gt;
+          </code></pre>
+          </div>
+
+
         </div>
         <div class="subparte02-qr">
           <h6>
@@ -105,6 +241,30 @@
           <!-- <div class="imagens-qr">
             <img src="../assets/vueRouterNavegacion.JPG" alt="vue Router Navegacion Programática" class="imagen">
           </div> -->
+
+          <div class="code-terminal">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <pre><code>
+&lt;script setup&gt;
+import { useRouter } from 'vue-router'
+
+// Dentro de un componente Vue
+export default {
+  methods: {
+    irAListaProductos() {
+      this.$router.push('/lista-productos')
+    }
+  }
+}
+&lt;/script&gt;
+          </code></pre>
+          </div>
+
+
         </div>
       </div>
       <div class="conclusion-qr">
@@ -143,7 +303,7 @@
   font-family: 'prototype', sans-serif;
   font-size: 4rem;
   padding: 0 0 0 15px;
-  margin: 20px 60px 10px 32px;
+  margin: 10px 60px 10px 32px;
 }
 
 .router-qr h6 {
@@ -155,7 +315,7 @@
 
 .router-qr p {
   font-size: 0.96rem;
-  margin: 20px 60px 10px 50px;
+  margin: 10px 60px 0px 50px;
   font-family: sans-serif;
   padding-bottom: 10px;
   text-align: justify;
@@ -163,7 +323,7 @@
 
 .router-qr ul {
   font-size: 0.96rem;
-  margin: 20px 60px 10px 50px;
+  margin: 10px 60px 10px 50px;
 }
 
 .router-qr span {
@@ -226,7 +386,7 @@
   display: flex;
   justify-items: center;
   margin-right: 15px;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
 }
 
 .bloque-qr img {
@@ -268,38 +428,48 @@
 }
 
 .code-terminal {
-    background: #1e1e1e;
-    color: #e8e8e8;
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    font-family: 'Fira Code', monospace;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    margin: 10px 52px 10px 50px;
-    overflow-x: auto;
-    cursor: pointer
+  background: #1e1e1e;
+  color: #e8e8e8;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-family: 'Fira Code', monospace;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin: 10px 52px 10px 50px;
+  overflow-x: auto;
+  cursor: pointer
 }
 
 .code-header {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 0.5rem;
+  display: flex;
+  gap: 6px;
+  margin-bottom: 0.5rem;
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }
 
 .red {
-    background: #ff5f56;
+  background: #ff5f56;
 }
 
 .yellow {
-    background: #ffbd2e;
+  background: #ffbd2e;
 }
 
 .green {
-    background: #27c93f;
+  background: #27c93f;
 }
+
+.conclusion-qr p {
+  margin-bottom: 20px;
+}
+
+.conclusion-qr h6 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 </style>

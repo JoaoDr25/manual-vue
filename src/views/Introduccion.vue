@@ -25,20 +25,26 @@
     </div>
     <div class="main-container">
       <ul>
-        <li><b>Reactividad:</b> Utiliza un sistema de reactividad que actualiza automáticamente la interfaz de
+        <li><b>REACTIVIDAD:</b> Utiliza un sistema de reactividad que actualiza automáticamente la interfaz de
           usuario cuando cambian los datos. Esto permite mantener sincronizados los elementos visuales sin tener que
           manipular el <span>DOM</span>.</li>
-        <li><b>Arquitectura basada en componentes:</b> Todo en Vue se organiza en componentes reutilizables que combinan
-          <span>HTML</span>, <span>CSS</span> y <span>JavaScript</span>. Esta estructura mejora la mantenibilidad, la modularidad y la escalabilidad de los
-          proyectos.</li>
-        <li><b>Curva de aprendizaje suave:</b> Es fácil de
-          aprender para quienes ya dominan los fundamentos de <span>HTML</span>, <span>CSS</span>  y <span>JavaScript</span>. Permite empezar con proyectos
+        <li><b>VIRTUAL DOM</b>: Gracias a su sistema de <span>DOM</span> virtual, Vue optimiza el rendimiento al
+          identificar los cambios en los datos y aplicar únicamente las actualizaciones necesarias en el
+          <span>DOM</span> real, lo que resulta en una experiencia más rápida y eficiente.</li>
+        <li><b>INTEGRACIÓN FLEXIBLE:</b> Puede integrarse fácilmente en proyectos existentes o combinarse con otras
+          bibliotecas o frameworks sin alterar toda la base de código.</li>
+        <li><b>CURVA DE APRENDIZAJE SUAVE:</b> Es fácil de
+          aprender para quienes ya dominan los fundamentos de <span>HTML</span>, <span>CSS</span> y
+          <span>JavaScript</span>. Permite empezar con proyectos
           pequeños y escalar gradualmente hacia aplicaciones más complejas.
         </li>
-        <li><b>Integración flexible:</b> Puede integrarse fácilmente en proyectos existentes o combinarse con otras
-          bibliotecas o frameworks sin alterar toda la base de código.</li>
-        <li><b>Virtual DOM</b>: Gracias a su sistema de <span>DOM</span> virtual, Vue optimiza el rendimiento al identificar los cambios en los datos y aplicar únicamente las actualizaciones necesarias en el <span>DOM</span> real, lo que resulta en una experiencia más rápida y eficiente.</li>
+        <li><b>ARQUITECTURA BASADA EN COMPONENTES:</b> Todo en Vue se organiza en componentes reutilizables que combinan
+          <span>HTML</span>, <span>CSS</span> y <span>JavaScript</span>. Esta estructura mejora la mantenibilidad, la
+          modularidad y la escalabilidad de los
+          proyectos.
+        </li>
       </ul>
+
       <div class="video-container">
         <iframe width="560" height="335" src="https://www.youtube.com/embed/9AHMihFhrzw?si=5bv2sxBDsDTj-P3l"
           title="YouTube video player" frameborder="0"
@@ -54,44 +60,43 @@
       <div class="second-container">
         <div class="parteUno">
           <ul>
-            <li><b>Ligero y rápido: </b>Vue.js tiene un tamaño reducido y un rendimiento
+            <li><b>LIGERO Y RÁPIDO: </b>Vue.js tiene un tamaño reducido y un rendimiento
               excelente gracias a su
               motor
               de reactividad optimizado. Esto permite cargar aplicaciones más rápido y con menor consumo de recursos,
               ideal tanto para sitios pequeños como para aplicaciones complejas.</li>
-            <li><b>Curva de aprendizaje accesible: </b>Su sintaxis es clara y su documentación está muy bien
+            <li><b>CURVA DE APRENDIZAJE ACCESIBLE: </b>Su sintaxis es clara y su documentación está muy bien
               estructurada, lo que facilita el aprendizaje
               incluso
               para quienes se inician en frameworks modernos de <span>JavaScript</span>.</li>
-            <li><b>Excelente documentación y comunidad activa: </b>Vue cuenta con una de las comunidades más amigables y
-              activas del ecosistema frontend. Existen miles de
-              tutoriales, foros, cursos y paquetes creados por la comunidad, lo que facilita resolver dudas y encontrar
-              soluciones.</li>
-
-            <li><b>Integración sencilla con otras tecnologías: </b>Puede incorporarse fácilmente en proyectos que ya
+            <li><b>INTEGRACIÓN SENCILLA CON OTRAS TECNOLOGÍAS: </b>Puede incorporarse fácilmente en proyectos que ya
               utilizan frameworks backend como <span>Laravel</span>, <span>Django</span> o
               <span>Rails</span>, sin necesidad de reescribir toda la aplicación.
             </li>
+            <li><b>EXCELENTE DOCUMENTACIÓN Y COMUNIDAD ACTIVA: </b>Vue cuenta con una de las comunidades más amigables y
+              activas del ecosistema frontend. Existen miles de
+              tutoriales, foros, cursos y paquetes creados por la comunidad, lo que facilita resolver dudas y encontrar
+              soluciones.</li>
           </ul>
         </div>
         <div class="parteDos">
           <ul>
-            <li><b>Ideal para cualquier tipo de proyecto: </b>Vue puede usarse tanto para agregar interactividad a una
+            <li><b>IDEAL PARA CUALQUIER TIPO DE PROYECTO: </b>Vue puede usarse tanto para agregar interactividad a una
               sola sección de una web existente, como para
               desarrollar aplicaciones <span>SPA</span> (Single Page Application) completas. Su escalabilidad lo hace
               útil para
               proyectos personales o empresariales.</li>
-            <li><b>Alta mantenibilidad y escalabilidad: </b>Su arquitectura basada en componentes permite dividir la
+            <li><b>ALTA MANTENIBILIDAD Y ESCALABILIDAD: </b>Su arquitectura basada en componentes permite dividir la
               interfaz en partes independientes y
               reutilizables,
               lo que mejora la organización del código y facilita el trabajo en equipo.</li>
-            <li><b>Compatibilidad con <span>TypeScript</span> y herramientas modernas: </b>Vue ofrece soporte oficial
+            <li><b>COMPATIBILIDAD CON <span>TYPESCRIPT</span> Y HERRAMIENTAS MODERNAS: </b>Vue ofrece soporte oficial
               para
               <span>TypeScript</span>, lo que permite aprovechar la tipificación estática y mejorar
               la
               productividad en equipos grandes.
             </li>
-            <li><b>Fuerte enfoque en la experiencia del desarrollador (DX): </b>Vue proporciona mensajes de error
+            <li><b>FUERTE ENFOQUE EN LA EXPERIENCIA DEL DESARROLLADOR: </b>Vue proporciona mensajes de error
               claros, herramientas visuales como <span>Vue DevTools</span>, y un entorno de
               desarrollo muy agradable, lo que reduce el tiempo de depuración y aumenta la eficiencia.</li>
           </ul>
@@ -148,6 +153,7 @@
 
 .introduccion-qr b {
   font-family: 'prototype', sans-serif;
+  font-size: 0.85rem;
 }
 
 /* .introduccion-qr span {

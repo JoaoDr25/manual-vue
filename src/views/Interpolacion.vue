@@ -3,7 +3,7 @@
     <h1>Interpolación</h1>
 
     <p>
-      La interpolación en Vue permite insertar valores dinámicos dentro del HTML utilizando llaves dobles <code v-pre>{{ }}</code>.
+      La interpolación en Vue permite insertar valores dinámicos dentro del HTML utilizando llaves dobles <strong><code v-pre>{{ }}</code></strong>.
       Vue se encarga de renderizar automáticamente el contenido de las variables o expresiones en el DOM,
       manteniendo la vista sincronizada con los datos del componente.
     </p>

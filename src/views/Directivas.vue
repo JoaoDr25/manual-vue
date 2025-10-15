@@ -1,8 +1,12 @@
 <template>
-  <q-page padding class="directivas-qr">
+  <q-page class="directivas-qr">
+
     <h1>Directivas en Vue</h1>
+
+
     <p>
-      Las directivas son atributos especiales que se añaden a los elementos en el template. Sirven para manipular el DOM
+      Son atributos especiales que se añaden a los elementos en el template. Sirven para manipular el
+      DOM
       de forma declarativa y reactiva, según los datos del componente.
       Algunas de las más usadas son:
     </p>
@@ -18,20 +22,76 @@
       se resuelven con las directivas integradas.
     </p>
 
-    <p>Ejemplo práctico con varias directivas:</p>
+
     <!-- <div class="imagenes-qr">
       <img src="../assets/directives.jpeg" alt="directives" class="imagen">
     </div> -->
-    <div class="-qr">
-      <p>También se puede usar interpolación para enlazar atributos dinámicos:</p>
 
-      <div class="code-terminal">
-        <div class="code-header">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
+    <p>Ejemplo práctico con varias directivas:</p>
+
+    <div class="main-qr">
+      <!-- Primera columna -->
+      <div class="first-qr">
+        <div class="code-terminal">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <pre><code>
+&lt;template&gt;
+  &lt;q-page padding&gt;
+    &lt;h2&gt;Directivas en acción&lt;/h2&gt;
+
+    &lt;!-- v-model: enlace bidireccional --&gt;
+    &lt;q-input v-model="nuevoItem" label="Agregar tecnología" /&gt;
+
+    &lt;!-- v-on: click --&gt;
+    &lt;q-btn color="primary" label="Agregar" @click="agregarItem" /&gt;
+
+    &lt;!-- v-if: condicional --&gt;
+    &lt;p v-if="lista.length === 0"&gt;No hay elementos en la lista&lt;/p&gt;
+
+    &lt;!-- v-for: renderizado dinámico --&gt;
+    &lt;ul v-else&gt;
+      &lt;li v-for="(item, i) in lista" :key="i"&gt;
+        {{ i + 1 }}. {{ item }}
+      &lt;/li&gt;
+    &lt;/ul&gt;
+          </code></pre>
         </div>
-        <pre><code></code></pre>
+      </div>
+
+      <!-- Segunda columna -->
+      <div class="second-qr">
+        <div class="code-terminal">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <pre><code>
+    &lt;!-- v-bind: enlace dinámico --&gt;
+    &lt;img :src="imagen" alt="Logo de Vue" width="100" /&gt;
+  &lt;/q-page&gt;
+&lt;/template&gt;
+
+&lt;script setup&gt;
+import { ref } from 'vue'
+
+const lista = ref(['Vue', 'React', 'Angular'])
+const nuevoItem = ref('')
+const imagen = ref('https://vuejs.org/images/logo.png')
+
+const agregarItem = () =&gt; {
+  if (nuevoItem.value.trim() !== '') {
+    lista.value.push(nuevoItem.value)
+    nuevoItem.value = ''
+  }
+}
+&lt;/script&gt;
+          </code></pre>
+        </div>
       </div>
     </div>
 
@@ -39,6 +99,7 @@
 </template>
 
 <script setup></script>
+
 <style scoped>
 @font-face {
   font-family: 'prototype';
@@ -83,40 +144,51 @@
   transform: scale(1.009);
 } */
 
+.main-qr {
+  display: flex;
+}
+
+.first-qr {
+  width: 50%;
+}
+
+.second-qr {
+  width: 50%;
+}
+
 .code-terminal {
-    background: #1e1e1e;
-    color: #e8e8e8;
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    font-family: 'Fira Code', monospace;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    margin: 10px 52px 10px 50px;
-    overflow-x: auto;
-    cursor: pointer
+  background: #1e1e1e;
+  color: #e8e8e8;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-family: 'Fira Code', monospace;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin: 10px 60px 30px 50px;
+  overflow-x: auto;
+  cursor: pointer
 }
 
 .code-header {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 0.5rem;
+  display: flex;
+  gap: 6px;
+  margin-bottom: 0.5rem;
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }
 
 .red {
-    background: #ff5f56;
+  background: #ff5f56;
 }
 
 .yellow {
-    background: #ffbd2e;
+  background: #ffbd2e;
 }
 
 .green {
-    background: #27c93f;
+  background: #27c93f;
 }
-
 </style>
