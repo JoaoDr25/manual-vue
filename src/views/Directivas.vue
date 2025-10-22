@@ -3,7 +3,6 @@
 
     <h1>Directivas en Vue</h1>
 
-
     <p>
       Son atributos especiales que se añaden a los elementos en el template. Sirven para manipular el
       DOM
@@ -22,15 +21,10 @@
       se resuelven con las directivas integradas.
     </p>
 
-
-    <!-- <div class="imagenes-qr">
-      <img src="../assets/directives.jpeg" alt="directives" class="imagen">
-    </div> -->
-
     <p>Ejemplo práctico con varias directivas:</p>
 
     <div class="main-qr">
-      <!-- Primera columna -->
+
       <div class="first-qr">
         <div class="code-terminal">
           <div class="code-header">
@@ -38,31 +32,30 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>
+          <pre class="pre-dark"><code>
 &lt;template&gt;
-  &lt;q-page padding&gt;
-    &lt;h2&gt;Directivas en acción&lt;/h2&gt;
+  &lt;q-page <span class="t-attr">padding</span>&gt;
+  &lt;h2&gt;Directivas en acción&lt;/h2&gt;
 
-    &lt;!-- v-model: enlace bidireccional --&gt;
-    &lt;q-input v-model="nuevoItem" label="Agregar tecnología" /&gt;
+    <span class="t-comment">&lt;!-- v-model: enlace bidireccional --&gt;</span>
+    &lt;q-input <span class="t-attr">v-model</span>=<span class="t-string">&quot;nuevoItem&quot;</span> <span class="t-attr">label</span>=<span class="t-string">&quot;Agregar tecnología&quot;</span> /&gt;
 
-    &lt;!-- v-on: click --&gt;
-    &lt;q-btn color="primary" label="Agregar" @click="agregarItem" /&gt;
+    <span class="t-comment">&lt;!-- v-on: click --&gt;</span>
+    &lt;q-btn <span class="t-attr">color</span>=<span class="t-string">&quot;primary&quot;</span> <span class="t-attr">label</span>=<span class="t-string">&quot;Agregar&quot;</span> <span class="t-attr">@click</span>=<span class="t-string">&quot;agregarItem&quot;</span> /&gt;
 
-    &lt;!-- v-if: condicional --&gt;
-    &lt;p v-if="lista.length === 0"&gt;No hay elementos en la lista&lt;/p&gt;
+    <span class="t-comment">&lt;!-- v-if: condicional --&gt;</span>
+    &lt;p <span class="t-attr">v-if</span>=<span class="t-string">&quot;lista.length === 0&quot;</span>&gt;No hay elementos en la lista&lt;/p&gt;
 
-    &lt;!-- v-for: renderizado dinámico --&gt;
-    &lt;ul v-else&gt;
-      &lt;li v-for="(item, i) in lista" :key="i"&gt;
-        {{ i + 1 }}. {{ item }}
+    <span class="t-comment">&lt;!-- v-for: renderizado dinámico --&gt;</span>
+    &lt;ul <span class="t-attr">v-else</span>&gt;
+      &lt;li <span class="t-attr">v-for</span>=<span class="t-string">&quot;(item, i) in lista&quot;</span> <span class="t-attr">:key</span>=<span class="t-string">&quot;i&quot;</span>&gt;
+        &#123;&#123; <span class="t-ident">i</span> + <span class="t-num">1</span> &#125;&#125;. &#123;&#123; <span class="t-ident">item</span> &#125;&#125;
       &lt;/li&gt;
     &lt;/ul&gt;
-          </code></pre>
+</code></pre>
         </div>
       </div>
 
-      <!-- Segunda columna -->
       <div class="second-qr">
         <div class="code-terminal">
           <div class="code-header">
@@ -70,23 +63,23 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>
-    &lt;!-- v-bind: enlace dinámico --&gt;
-    &lt;img :src="imagen" alt="Logo de Vue" width="100" /&gt;
+          <pre class="pre-dark" style="margin-bottom: 0; padding-bottom: 10px;"><code>
+     <span class="t-comment">&lt;!-- v-bind: enlace dinámico --&gt;</span>
+    &lt;img <span class="t-attr">:src</span>=<span class="t-string">&quot;imagen&quot;</span> <span class="t-attr">alt</span>=<span class="t-string">&quot;Logo de Vue&quot;</span> <span class="t-attr">width</span>=<span class="t-string">&quot;100&quot;</span> /&gt;
   &lt;/q-page&gt;
 &lt;/template&gt;
 
-&lt;script setup&gt;
-import { ref } from 'vue'
+&lt;script <span class="t-attr">setup</span>&gt;
+<span class="t-key">import</span> { <span class="t-ident">ref</span> } <span class="t-key">from</span> <span class="t-string">'vue'</span>
 
-const lista = ref(['Vue', 'React', 'Angular'])
-const nuevoItem = ref('')
-const imagen = ref('https://vuejs.org/images/logo.png')
+<span class="t-key">const</span> <span class="t-ident">lista</span> = <span class="t-fn">ref</span>([<span class="t-string">'Vue'</span>, <span class="t-string">'React'</span>, <span class="t-string">'Angular'</span>])
+<span class="t-key">const</span> <span class="t-ident">nuevoItem</span> = <span class="t-fn">ref</span>('')
+<span class="t-key">const</span> <span class="t-ident">imagen</span> = <span class="t-fn">ref</span>(<span class="t-string">'https://vuejs.org/images/logo.png'</span>)
 
-const agregarItem = () =&gt; {
-  if (nuevoItem.value.trim() !== '') {
-    lista.value.push(nuevoItem.value)
-    nuevoItem.value = ''
+<span class="t-key">const</span> <span class="t-fn">agregarItem</span> = () =&gt; {
+  <span class="t-key">if</span> (<span class="t-ident">nuevoItem</span>.<span class="t-prop">value</span>.<span class="t-fn">trim</span>() !== <span class="t-string">''</span>) {
+    <span class="t-ident">lista</span>.<span class="t-prop">value</span>.<span class="t-fn">push</span>(<span class="t-ident">nuevoItem</span>.<span class="t-prop">value</span>)
+    <span class="t-ident">nuevoItem</span>.<span class="t-prop">value</span> = <span class="t-string">''</span>
   }
 }
 &lt;/script&gt;
@@ -127,22 +120,6 @@ const agregarItem = () =&gt; {
 .directivas-qr span {
   font-family: 'prototype', sans-serif;
 }
-
-/* .imagenes-qr {
-  display: flex;
-  justify-items: center;
-} */
-
-/* .imagenes-qr img {
-  width: 40rem;
-  filter: drop-shadow(2px 4px 6px black);
-  margin-left: 22px;
-  transition: transform 0.3s ease;
-} */
-
-/* .imagenes-qr img:hover {
-  transform: scale(1.009);
-} */
 
 .main-qr {
   display: flex;
@@ -190,5 +167,45 @@ const agregarItem = () =&gt; {
 
 .green {
   background: #27c93f;
+}
+
+.pre-dark {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.t-tag {
+  color: #d4d4d4;
+}
+
+.t-attr {
+  color: #C586C0;
+}
+
+.t-key {
+  color: #569CD6;
+}
+
+.t-ident {
+  color: #9CDCFE;
+}
+
+.t-string {
+  color: #6A9955;
+}
+
+.t-fn {
+  color: #D16969;
+}
+
+.t-comment {
+  color: #ffffff;
+  opacity: 0.5;
+  font-style: normal;
 }
 </style>

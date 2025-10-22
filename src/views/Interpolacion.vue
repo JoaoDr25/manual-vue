@@ -3,7 +3,8 @@
     <h1>Interpolación</h1>
 
     <p>
-      La interpolación en Vue permite insertar valores dinámicos dentro del HTML utilizando llaves dobles <strong><code v-pre>{{ }}</code></strong>.
+      La interpolación en Vue permite insertar valores dinámicos dentro del HTML utilizando llaves dobles <b><code
+          v-pre> {{ }}</code></b>.
       Vue se encarga de renderizar automáticamente el contenido de las variables o expresiones en el DOM,
       manteniendo la vista sincronizada con los datos del componente.
     </p>
@@ -20,25 +21,25 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>
+          <pre class="pre-dark" style="margin-bottom: 21px;"><code>
 &lt;template&gt;
-  &lt;q-page padding&gt;
-    &lt;h1&gt;Hola, {{ nombre }} 👋&lt;/h1&gt;
-    &lt;q-input v-model="nombre" label="Escribe tu nombre" /&gt;
+  &lt;q-page <span class="t-attr">padding</span>&gt;
+    &lt;h1&gt;Hola, &#123;&#123; <span class="t-ident">nombre</span> &#125;&#125; 👋&lt;/h1&gt;
+    &lt;q-input <span class="t-attr">v-model</span>=<span class="t-string">"nombre"</span> <span class="t-attr">label</span>=<span class="t-string">"Escribe tu nombre"</span> /&gt;
   &lt;/q-page&gt;
 &lt;/template&gt;
 
-&lt;script setup&gt;
-import { ref } from 'vue'
-
-const nombre = ref('Juan')
+&lt;script <span class="t-attr">setup</span>&gt;
+<span class="t-comment">// Ejemplo: definimos un ref reactivo</span>
+<span class="t-key">const</span> <span class="t-ident">nombre</span> = <span class="t-fn">ref</span>(<span class="t-string">'Juan'</span>)
 &lt;/script&gt;
-          </code></pre>
+</code></pre>
+
         </div>
 
         <ul style="padding: 5px 50px 5px 65px;">
-          <li v-pre>{{ nombre }} muestra el valor de la variable nombre.</li>
-          <li>Gracias a <code>v-model</code>, el valor se actualiza automáticamente en tiempo real cada vez que el usuario escribe.</li>
+          <li v-pre><span>{{ nombre }}</span> muestra el valor de la variable nombre. Gracias a <span>v-model</span>, el valor se actualiza automáticamente en tiempo real cada vez que el
+            usuario escribe.</li>
         </ul>
       </div>
 
@@ -52,29 +53,30 @@ const nombre = ref('Juan')
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>
+          <pre class="pre-dark" style="margin-bottom: 0;"><code>
 &lt;template&gt;
   &lt;div class="example"&gt;
-    &lt;p&gt;El año actual es: {{ new Date().getFullYear() }}&lt;/p&gt;
-    &lt;p&gt;Tu nombre en mayúsculas: {{ nombre.toUpperCase() }}&lt;/p&gt;
-    &lt;p&gt;Longitud de tu nombre: {{ nombre.length }}&lt;/p&gt;
+    &lt;p&gt;El año actual es: &#123;&#123; <span class="t-fn">new</span> <span class="t-class">Date</span>().<span class="t-ident">getFullYear</span>() &#125;&#125;&lt;/p&gt;
+    &lt;p&gt;Tu nombre en mayúsculas: &#123;&#123; <span class="t-ident">nombre</span>.<span class="t-ident">toUpperCase</span>() &#125;&#125;&lt;/p&gt;
+    &lt;p&gt;Longitud de tu nombre: &#123;&#123; <span class="t-ident">nombre</span>.<span class="t-prop">length</span> &#125;&#125;&lt;/p&gt;
   &lt;/div&gt;
 &lt;/template&gt;
 
-&lt;script setup&gt;
-import { ref } from 'vue'
+&lt;script <span class="t-attr">setup</span>&gt;
+<span class="t-key">import</span> { <span class="t-ident">ref</span> } <span class="t-key">from</span> <span class="t-string">'vue'</span>
 
-const nombre = ref('Camilo')
+<span class="t-key">const</span> <span class="t-ident">nombre</span> = <span class="t-fn">ref</span>(<span class="t-string">'Camilo'</span>)
 &lt;/script&gt;
-          </code></pre>
+</code></pre>
         </div>
 
         <ul style="padding: 5px 50px 5px 65px;">
-          <li>Solo se permiten expresiones simples, no estructuras de control como <code>if</code> o <code>for</code>.</li>
+          <li>Solo se permiten expresiones simples, no estructuras de control como <span>if</span> o <span>for</span>.
+          </li>
         </ul>
       </div>
 
- 
+
       <div class="third-qr">
         <p>También se puede usar interpolación para enlazar atributos dinámicos:</p>
 
@@ -84,21 +86,22 @@ const nombre = ref('Camilo')
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>
+          <pre class="pre-dark"><code>
 &lt;template&gt;
-  &lt;img :alt="`Foto de ${nombre}`" :src="imagenUrl" /&gt;
+  &lt;img <span class="t-attr">:alt</span>=<span class="t-string">&quot;&#96;Foto de &#36;&#123;<span class="t-ident">nombre</span>&#125;&#96;&quot;</span> <span class="t-attr">:src</span>=<span class="t-ident">imagenUrl</span> /&gt;
 &lt;/template&gt;
 
-&lt;script setup&gt;
-const nombre = 'Juan'
-const imagenUrl = 'https://vuejs.org/images/logo.png'
+&lt;script <span class="t-attr">setup</span>&gt;
+<span class="t-key">const</span> <span class="t-ident">nombre</span> = <span class="t-string">'Juan'</span>
+<span class="t-key">const</span> <span class="t-ident">imagenUrl</span> = <span class="t-string">'https://vuejs.org/images/logo.png'</span>
 &lt;/script&gt;
-          </code></pre>
+</code></pre>
+
         </div>
 
         <ul style="padding: 5px 50px 5px 65px;">
-          <li v-pre>:alt es un atajo de v-bind:alt, y permite enlazar dinámicamente el texto alternativo.</li>
-          <li>Así Vue actualiza automáticamente los atributos HTML cuando cambian las variables.</li>
+          <li v-pre><span>:alt</span> es un atajo de <span>v-bind: alt</span>, y permite enlazar dinámicamente el texto
+            alternativo. Así Vue actualiza automáticamente los atributos HTML cuando cambian las variables.</li>
         </ul>
       </div>
     </div>
@@ -117,84 +120,106 @@ const imagenUrl = 'https://vuejs.org/images/logo.png'
 
 <style scoped>
 @font-face {
-    font-family: 'prototype';
-    src: url('../fonts/Prototype.ttf') format('truetype');
+  font-family: 'prototype';
+  src: url('../fonts/Prototype.ttf') format('truetype');
 }
 
 .interpolacion-qr h1 {
-    font-family: 'prototype', sans-serif;
-    font-size: 4rem;
-    padding: 0 0 0 15px;
-    margin: 20px 60px 10px 32px;
+  font-family: 'prototype', sans-serif;
+  font-size: 4rem;
+  padding: 0 0 0 15px;
+  margin: 20px 60px 10px 32px;
 }
 
 .interpolacion-qr p {
-    font-size: 0.96rem;
-    margin: 20px 60px 10px 50px;
-    font-family: sans-serif;
+  font-size: 0.96rem;
+  margin: 20px 60px 10px 50px;
+  font-family: sans-serif;
 }
 
 .interpolacion-qr span {
-    font-family: 'prototype', sans-serif;
+  font-family: 'prototype', sans-serif;
 }
 
-/* .imagenes-qr {
-    display: flex;
-    justify-items: center;
-} */
-
-/* .imagenes-qr img {
-    width: 40rem;
-    filter: drop-shadow(2px 4px 6px black);
-    margin-left: 22px;
-    transition: transform 0.3s ease;
-} */
-
-/* .imagenes-qr img:hover {
-    transform: scale(1.009);
-} */
-
 .code-terminal {
-    background: #1e1e1e;
-    color: #e8e8e8;
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    font-family: 'Fira Code', monospace;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    margin: 10px 52px 10px 50px;
-    overflow-x: auto;
-    cursor: pointer;
+  background: #1e1e1e;
+  color: #e8e8e8;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-family: 'Fira Code', monospace;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin: 10px 52px 10px 50px;
+  overflow-x: auto;
+  cursor: pointer;
 }
 
 .code-header {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 0.5rem;
+  display: flex;
+  gap: 6px;
+  margin-bottom: 0.5rem;
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }
 
 .red {
-    background: #ff5f56;
+  background: #ff5f56;
 }
 
 .yellow {
-    background: #ffbd2e;
+  background: #ffbd2e;
 }
 
 .green {
-    background: #27c93f;
+  background: #27c93f;
 }
 
 .blocks-qr {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
 }
 
+.pre-dark {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.5;
+  overflow-x: auto;
+}
 
+.t-tag {
+  color: #d4d4d4;
+}
+
+.t-attr {
+  color: #C586C0;
+}
+
+.t-key {
+  color: #569CD6;
+}
+
+.t-ident {
+  color: #9CDCFE;
+}
+
+.t-string {
+  color: #6A9955;
+}
+
+.t-fn {
+  color: #D16969;
+}
+
+.t-comment {
+  color: #ffffff;
+  opacity: 0.5;
+  font-style: normal;
+}
 </style>

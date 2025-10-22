@@ -15,12 +15,9 @@
       Estos permiten realizar tareas como obtener datos de una API, suscribirse a eventos o limpiar recursos antes de
       que el componente desaparezca.
     </p>
-    <!-- <div class="imagenes-qr">
-      <img src="../assets/lifeCycle.jpeg" alt="lifeCycle" class="imagen">
-    </div> -->
 
     <div class="main-qr">
-      <!-- Primera columna -->
+
       <div class="first-qr">
         <div class="code-terminal">
           <div class="code-header">
@@ -28,31 +25,30 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>
+         <pre class="pre-dark" style="margin-bottom: 0;"><code>
 &lt;template&gt;
-  &lt;q-page padding&gt;
+  &lt;q-page <span class="t-attr">padding</span>&gt;
     &lt;h2&gt;onMounted en acción&lt;/h2&gt;
-    &lt;p&gt;{{ mensaje }}&lt;/p&gt;
+    &lt;p&gt;&#123;&#123; <span class="t-ident">mensaje</span> &#125;&#125;&lt;/p&gt;
   &lt;/q-page&gt;
 &lt;/template&gt;
 
-&lt;script setup&gt;
-import { ref, onMounted } from 'vue'
+&lt;script <span class="t-attr">setup</span>&gt;
+<span class="t-key">import</span> { <span class="t-ident">ref</span>, <span class="t-ident">onMounted</span> } <span class="t-key">from</span> <span class="t-string">'vue'</span>
 
-const mensaje = ref('Cargando...')
+<span class="t-key">const</span> <span class="t-ident">mensaje</span> = <span class="t-fn">ref</span>(<span class="t-string">'Cargando...'</span>)
 
-onMounted(() =&gt; {
-  console.log('✅ Componente montado')
-  setTimeout(() =&gt; {
-    mensaje.value = 'Componente montado 🎉'
-  }, 1000)
-})
-  </code></pre>
+<span class="t-fn">onMounted</span>(<span class="t-key">()</span> =&gt; &#123;
+  <span class="t-fn">console</span>.<span class="t-fn">log</span>(<span class="t-string">'✅ Componente montado'</span>)
+  <span class="t-fn">setTimeout</span>(<span class="t-key">()</span> =&gt; &#123;
+    <span class="t-ident">mensaje</span>.<span class="t-key">value</span> = <span class="t-string">'Componente montado 🎉'</span>
+  &#125;, <span class="t-num">1000</span>)
+&#125;)
+&lt;/script&gt;
+</code></pre>
         </div>
-
       </div>
 
-      <!-- Segunda columna -->
       <div class="second-qr">
         <div class="code-terminal">
           <div class="code-header">
@@ -60,31 +56,28 @@ onMounted(() =&gt; {
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>
-// Se ejecuta cada vez que cambia un valor reactivo
-onUpdated(() =&gt; {
-  console.log('🔁 El componente se ha actualizado')
-})
+<pre class="pre-dark" style="margin-bottom: 21px;"><code>
+<span class="t-comment">// Se ejecuta cada vez que cambia un valor reactivo</span>
+<span class="t-fn">onUpdated</span>(<span class="t-key">()</span> =&gt; &#123;
+  <span class="t-fn">console</span>.<span class="t-fn">log</span>(<span class="t-string">'🔁 El componente se ha actualizado'</span>)
+&#125;)
 
-// Se ejecuta justo antes de destruir el componente
-onUnmounted(() =&gt; {
-  console.log('💀 Componente destruido')
-})
+<span class="t-comment">// Se ejecuta justo antes de destruir el componente</span>
+<span class="t-fn">onUnmounted</span>(<span class="t-key">()</span> =&gt; &#123;
+  <span class="t-fn">console</span>.<span class="t-fn">log</span>(<span class="t-string">'💀 Componente destruido'</span>)
+&#125;)
 
-const actualizarMensaje = () =&gt; {
-  mensaje.value = 'El mensaje fue actualizado 🔄'
-}
+<span class="t-key">const</span> <span class="t-ident">actualizarMensaje</span> = <span class="t-key">()</span> =&gt; &#123;
+  <span class="t-ident">mensaje</span>.<span class="t-key">value</span> = <span class="t-string">'El mensaje fue actualizado 🔄'</span>
+&#125;
 &lt;/script&gt;
-  </code></pre>
+</code></pre>
         </div>
 
         <div class="frase-qr">
-         
             <p>Estos ciclos de vida permiten controlar el comportamiento del componente en diferentes momentos,
-              facilitando tareas como cargar datos, actualizar la vista o limpiar recursos.</p>
-         
+              facilitando tareas como cargar datos, actualizar la vista o limpiar recursos.</p> 
         </div>
-
       </div>
     </div>
 
@@ -120,22 +113,6 @@ const actualizarMensaje = () =&gt; {
 .ciclo-qr span {
   font-family: 'prototype', sans-serif;
 }
-
-/* .imagenes-qr {
-  display: flex;
-  justify-items: center;
-} */
-
-/* .imagenes-qr img {
-  width: 40rem;
-  filter: drop-shadow(2px 4px 6px black);
-  margin-left: 22px;
-  transition: transform 0.3s ease;
-} */
-
-/* .imagenes-qr img:hover {
-  transform: scale(1.009);
-} */
 
 .main-qr {
   display: flex;
@@ -194,5 +171,44 @@ const actualizarMensaje = () =&gt; {
 .frase-qr p {
   font-size: 0.9rem;
   margin: 20px 56px 0 56px;
+}
+.pre-dark {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.t-tag {
+  color: #d4d4d4;
+}
+
+.t-attr {
+  color: #C586C0;
+}
+
+.t-key {
+  color: #569CD6;
+}
+
+.t-ident {
+  color: #9CDCFE;
+}
+
+.t-string {
+  color: #6A9955;
+}
+
+.t-fn {
+  color: #D16969;
+}
+
+.t-comment {
+  color: #ffffff;
+  opacity: 0.5;
+  font-style: normal;
 }
 </style>

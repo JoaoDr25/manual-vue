@@ -4,46 +4,40 @@
       <h1>Vue Router</h1><img src="../assets/image-libreria.png" alt="logo de libreria">
     </div>
     <p>
-      Vue Router es una biblioteca oficial de Vue.js que proporciona un sistema de enrutamiento para aplicaciones Vue.
-      Permite a los desarrolladores definir rutas y componentes asociados.
-      Permite crear aplicaciones de una sola página <span>(SPA)</span> con múltiples vistas.
+      Vue Router es la biblioteca oficial de enrutamiento de Vue.js, diseñada para gestionar la navegación dentro de
+      aplicaciones creadas con este framework.
+      Su función principal es asociar diferentes rutas (URLs) con componentes específicos, permitiendo así que el
+      usuario pueda desplazarse entre distintas vistas sin recargar la página completa.
     </p>
     <ul>
       <li><span>router-link</span>: Crea enlaces de navegación.</li>
       <li><span>router-view</span>: Muestra el contenido de la ruta activa.</li>
-      <li>Soporta <span>parámetros dinámicos</span> como <span>/user/:id</span>.</li>
-      <li>Permite <span>rutas anidadas</span> y <span>guards</span> para controlar el acceso.</li>
+      <li>Soporta parámetros dinámicos como <span>/user/:id</span>.</li>
+      <li>Permite rutas anidadas y guards para controlar el acceso.</li>
     </ul>
-    <h6>
+    <h6 style="margin-bottom: 0; padding-bottom: 0;">
       Configuración básica de enrutamiento:
     </h6>
-    
-    <!-- <div class="imagen-qr">
-      <img src="../assets/vueRouterInstalacion.JPG" alt="Vue Router Instalación" class="imagen">
-    </div> -->
 
     <br>
     <div class="bloque-qr" style="width: 100%;">
 
       <div style="width: 50%;">
 
-      <p>
-      Para utilizar Vue Router, primero debemos instalarlo. Si estás utilizando Vue CLI, puedes agregar Vue Router
-      durante la creación del proyecto. Si ya tienes un proyecto Vue.js existente, puedes agregar Vue Router con el
-      siguiente comando:
-    </p>
+        <p style="margin-top: 0;">
+          Para utilizar Vue Router, primero debemos instalarlo. Si estás utilizando Vue CLI, puedes agregar Vue Router
+          durante la creación del proyecto. Si ya tienes un proyecto Vue.js existente, puedes agregar Vue Router con el
+          siguiente comando:
+        </p>
 
-
-         <div class="code-terminal" style="display: flex; padding-bottom: 0; margin-bottom: 40px; margin-top: 30px;">
-      <div class="code-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-      </div>
-      <pre style="margin: 0;"><code>
-            npm install vue-router
-          </code></pre>
-    </div>
+        <div class="code-terminal" style="padding-bottom: 0; margin-bottom: 40px; margin-top: 20px;">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <pre><code><span style="color: #DCDCAA;">npm</span> install vue-router</code></pre>
+        </div>
 
         <p>
           Una vez instalado Vue Router, necesitamos configurarlo. Aquí es donde definimos las rutas de nuestra
@@ -52,51 +46,49 @@
           correspondiente se renderiza.
         </p>
         <p>
-          Para configurar el enrutamiento en Vue, primero debes importar <span>createRouter </span> de
-          <span>vue-router</span>. Luego,
-          puedes definir las rutas de tu aplicación. Cada ruta es un objeto que define un <span>path</span>, un
-          <span>name</span> y un <span>component</span>.
+          Para realizar esta configuración, primero se debe importar la función <span>createRouter</span> desde el paquete
+          <span>vue-router</span>, junto con <span>createWebHistory</span> si deseamos habilitar un historial de navegación más tradicional basado
+          en URLs limpias. Luego, definimos un arreglo de rutas, donde cada una se representa como un objeto que
+          especifica un <span>path</span>, un <span>name</span> y el <span>component</span> que se mostrará.
         </p>
         <p>
-          En este ejemplo, hemos definido dos rutas: una para la página de inicio (/) y otra para la lista de productos
-          (/lista-productos). Cada ruta está asociada a un componente Vue, que se renderizará cuando se visite la ruta.
+          En el ejemplo, hemos definido dos rutas principales: una para la página de inicio (<span>/</span>) y otra para la sección
+          de lista de productos (<span>/lista-productos</span>). Cada ruta está vinculada a un componente Vue distinto, el cual se
+          renderizará dinámicamente cada vez que el usuario visite la ruta correspondiente, permitiendo una navegación
+          fluida y sin recargas completas de la página.
         </p>
       </div>
-      <!-- <div class="imagenes-qr">
-        <img src="../assets/vueRouterConfiguracion.JPG" alt="Vue Router Configuración" class="imagen">
-      </div> -->
 
-      <div class="code-terminal">
+      <div class="code-terminal" style="margin-top: 0; margin-left: 30px; width: 40.8%;">
         <div class="code-header">
           <span class="dot red"></span>
           <span class="dot yellow"></span>
           <span class="dot green"></span>
         </div>
-        <pre style="margin-bottom: 0;"><code>
-&lt;script setup&gt;
-import { createRouter, createWebHistory } from 'vue-router'
-import VistaInicio from './views/VistaInicio.vue'
-import VistaListaProductos from './views/VistaListaProductos.vue'
+        <pre class="pre-dark" style="margin-bottom: 0;"><code>
+&lt;script <span class="t-key">setup</span>&gt;
+<span class="t-key">import</span> &#123; <span class="t-ident">createRouter</span>, <span class="t-ident">createWebHistory</span> &#125; <span class="t-key">from</span> <span class="t-string">'vue-router'</span>
+<span class="t-key">import</span> <span class="t-ident">VistaInicio</span> <span class="t-key">from</span> <span class="t-string">'./views/VistaInicio.vue'</span>
+<span class="t-key">import</span> <span class="t-ident">VistaListaProductos</span> <span class="t-key">from</span> <span class="t-string">'./views/VistaListaProductos.vue'</span>
 
-// Creación del router
-const router = createRouter({
-  history: createWebHistory(),
-  routes: [
-    {
-      path: '/',
-      name: 'inicio',
-      component: VistaInicio
-    },
-    {
-      path: '/lista-productos',
-      name: 'lista-productos',
-      component: VistaListaProductos
-    }
+<span class="t-comment">// Creación del router</span>
+<span class="t-key">const</span> <span class="t-ident">router</span> = <span class="t-ident">createRouter</span>(&#123;
+  <span class="t-prop">history</span>: <span class="t-ident">createWebHistory</span>(),
+  <span class="t-prop">routes</span>: [
+    &#123;
+      <span class="t-prop">path</span>: <span class="t-string">'/'</span>,
+      <span class="t-prop">name</span>: <span class="t-string">'inicio'</span>,
+      <span class="t-prop">component</span>: <span class="t-ident">VistaInicio</span>
+    &#125;,
+    &#123;
+      <span class="t-prop">path</span>: <span class="t-string">'/lista-productos'</span>,
+      <span class="t-prop">name</span>: <span class="t-string">'lista-productos'</span>,
+      <span class="t-prop">component</span>: <span class="t-ident">VistaListaProductos</span>
+    &#125;
   ]
-})
+&#125;)
 &lt;/script&gt;
-
-          </code></pre>
+</code></pre>
       </div>
 
     </div>
@@ -108,13 +100,10 @@ const router = createRouter({
             Enrutamiento dinámico:
           </h6>
           <p>
-            El enrutamiento dinámico es una característica poderosa de Vue Router que permite definir rutas con
-            parámetros. Esto es útil cuando tienes una ruta que depende de algún tipo de dato, como un ID de producto.
-            Aquí tienes un ejemplo de cómo configurar el enrutamiento dinámico:
+            Es una característica de Vue Router que permite definir rutas con
+            parámetros. Esto es útil cuando se tiene una ruta que depende de algún tipo de dato.
+            Aquí hay un ejemplo de cómo configurar el enrutamiento dinámico:
           </p>
-          <!-- <div class="imagens-qr">
-            <img src="../assets/vueRouterEnrutamiento.JPG" alt="Vue Router Enrutamiento Dinámico" class="imagen">
-          </div> -->
 
           <div class="code-terminal">
             <div class="code-header">
@@ -122,85 +111,36 @@ const router = createRouter({
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <pre><code>
-&lt;script setup&gt;
-import { createRouter, createWebHistory } from 'vue-router'
-import VistaProducto from './views/VistaProducto.vue'
+            <pre class="pre-dark"><code>
+&lt;script <span class="t-key">setup</span>&gt;
+<span class="t-key">import</span> &#123; <span class="t-ident">createRouter</span>, <span class="t-ident">createWebHistory</span> &#125; <span class="t-key">from</span> <span class="t-string">'vue-router'</span>
+<span class="t-key">import</span> <span class="t-ident">VistaProducto</span> <span class="t-key">from</span> <span class="t-string">'./views/VistaProducto.vue'</span>
 
-// Creación del router con ruta dinámica
-const router = createRouter({
-  history: createWebHistory(),
-  routes: [
-    {
-      path: '/producto/:id',
-      name: 'producto',
-      component: VistaProducto
-    }
+<span class="t-comment">// Creación del router con ruta dinámica</span>
+<span class="t-key">const</span> <span class="t-ident">router</span> = <span class="t-ident">createRouter</span>(&#123;
+  <span class="t-prop">history</span>: <span class="t-ident">createWebHistory</span>(),
+  <span class="t-prop">routes</span>: [
+    &#123;
+      <span class="t-prop">path</span>: <span class="t-string">'/producto/:id'</span>,
+      <span class="t-prop">name</span>: <span class="t-string">'producto'</span>,
+      <span class="t-prop">component</span>: <span class="t-ident">VistaProducto</span>
+    &#125;
   ]
-})
+&#125;)
 &lt;/script&gt;
-          </code></pre>
+</code></pre>
           </div>
 
         </div>
         <div class="subparte02-qr">
           <h6>
-            Enrutamiento anidado:
-          </h6>
-          <p>
-            El enrutamiento anidado te permite tener rutas dentro de otras rutas. Esto es útil cuando tienes una sección
-            de
-            tu aplicación que tiene su propia subnavegación. Aquí tienes un ejemplo de cómo configurar el enrutamiento
-            anidado:
-          </p>
-          <!-- <div class="imagens-qr">
-            <img src="../assets/vueRouterEnrutamiento02.JPG" alt="vue Router Enrutamiento Anidado" class="imagen">
-          </div> -->
-          <div class="code-terminal">
-            <div class="code-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <pre><code>
-const router = createRouter({
-  routes: [
-    {
-      path: '/producto/:id',
-      name: 'producto',
-      component: VistaProducto,
-      children: [
-        {
-          path: 'reseñas',
-          component: ReseñasProducto
-        },
-        {
-          path: 'variaciones',
-          component: VariacionesProducto
-        }
-      ]
-    }
-  ]
-})
-&lt;/script&gt;
-          </code></pre>
-          </div>
-        </div>
-
-
-      </div>
-      <div class="parte02-qr">
-        <div class="subparte01-qr">
-          <h6>
             Redirecciones:
           </h6>
           <p>
-            Vue Router también te permite configurar redirecciones. Esto es útil cuando quieres que una ruta específica
-            redirija a otra ruta. Aquí tienes un ejemplo de cómo configurar una redirección:
+            Vue Router también te permite configurar redirecciones. Esto es útil cuando se quiere que una ruta
+            específica
+            redirija a otra ruta. Aquí hay un ejemplo de cómo configurar una redirección:
           </p>
-          <!-- <div class="imagens-qr">
-            <img src="../assets/vueRouterRedireccion.JPG" alt="vue Router Redirecciones" class="imagen">
-          </div> -->
 
           <div class="code-terminal">
             <div class="code-header">
@@ -208,39 +148,92 @@ const router = createRouter({
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <pre><code>
-const router = createRouter({
-  routes: [
-    {
-      path: '/',
-      name: 'inicio',
-      redirect: to => ({ path: '/lista-productos' })
-    },
-    {
-      path: '/lista-productos',
-      name: 'lista-productos',
-      component: VistaListaProductos
-    }
+            <pre class="pre-dark"><code>
+&lt;script <span class="t-key">setup</span>&gt;
+<span class="t-key">import</span> &#123; <span class="t-ident">createRouter</span> &#125; <span class="t-key">from</span> <span class="t-string">'vue-router'</span>
+<span class="t-key">import</span> <span class="t-ident">VistaListaProductos</span> <span class="t-key">from</span> <span class="t-string">'./views/VistaListaProductos.vue'</span>
+
+<span class="t-comment">// Ejemplo de redirección de ruta con función flecha</span>
+<span class="t-key">const</span> <span class="t-ident">router</span> = <span class="t-ident">createRouter</span>(&#123;
+  <span class="t-prop">routes</span>: [
+    &#123;
+      <span class="t-prop">path</span>: <span class="t-string">'/'</span>,
+      <span class="t-prop">name</span>: <span class="t-string">'inicio'</span>,
+      <span class="t-prop">redirect</span>: <span class="t-func">to</span> =&gt; (&#123; <span class="t-prop">path</span>: <span class="t-string">'/lista-productos'</span> &#125;)
+    &#125;,
+    &#123;
+      <span class="t-prop">path</span>: <span class="t-string">'/lista-productos'</span>,
+      <span class="t-prop">name</span>: <span class="t-string">'lista-productos'</span>,
+      <span class="t-prop">component</span>: <span class="t-ident">VistaListaProductos</span>
+    &#125;
   ]
-})
+&#125;)
 &lt;/script&gt;
-          </code></pre>
+</code></pre>
           </div>
-
-
         </div>
+      </div>
+
+
+      <div class="parte02-qr">
+        <div class="subparte01-qr">
+          <h6>
+            Enrutamiento anidado:
+          </h6>
+          <p>
+            Permite tener rutas dentro de otras rutas. Esto es útil cuando se tiene una sección
+            de
+            la aplicación que tiene su propia subnavegación. Aquí hay un ejemplo de cómo configurar el enrutamiento
+            anidado:
+          </p>
+
+          <div class="code-terminal">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <pre class="pre-dark" style="margin-bottom: 0;"><code>
+&lt;script <span class="t-key">setup</span>&gt;
+<span class="t-key">import</span> &#123; <span class="t-ident">createRouter</span> &#125; <span class="t-key">from</span> <span class="t-string">'vue-router'</span>
+<span class="t-key">import</span> <span class="t-ident">VistaProducto</span> <span class="t-key">from</span> <span class="t-string">'./views/VistaProducto.vue'</span>
+<span class="t-key">import</span> <span class="t-ident">ReseñasProducto</span> <span class="t-key">from</span> <span class="t-string">'./views/ReseñasProducto.vue'</span>
+<span class="t-key">import</span> <span class="t-ident">VariacionesProducto</span> <span class="t-key">from</span> <span class="t-string">'./views/VariacionesProducto.vue'</span>
+
+<span class="t-comment">// Router con enrutamiento anidado (nested routes)</span>
+<span class="t-key">const</span> <span class="t-ident">router</span> = <span class="t-ident">createRouter</span>(&#123;
+  <span class="t-prop">routes</span>: [
+    &#123;
+      <span class="t-prop">path</span>: <span class="t-string">'/producto/:id'</span>,
+      <span class="t-prop">name</span>: <span class="t-string">'producto'</span>,
+      <span class="t-prop">component</span>: <span class="t-ident">VistaProducto</span>,
+      <span class="t-prop">children</span>: [
+        &#123;
+          <span class="t-prop">path</span>: <span class="t-string">'reseñas'</span>,
+          <span class="t-prop">component</span>: <span class="t-ident">ReseñasProducto</span>
+        &#125;,
+        &#123;
+          <span class="t-prop">path</span>: <span class="t-string">'variaciones'</span>,
+          <span class="t-prop">component</span>: <span class="t-ident">VariacionesProducto</span>
+        &#125;
+      ]
+    &#125;
+  ]
+&#125;)
+&lt;/script&gt;
+</code></pre>
+          </div>
+        </div>
+
         <div class="subparte02-qr">
           <h6>
             Navegación programática:
           </h6>
           <p>
-            Vue Router proporciona métodos para navegar a diferentes rutas de forma programática. Puedes utilizar el
+            Vue Router proporciona métodos para navegar a diferentes rutas de forma programática. Se puede utilizar el
             método
-            push del router para navegar a una ruta específica. Aquí tienes un ejemplo de cómo hacerlo:
+            push del router para navegar a una ruta específica. Aquí hay un ejemplo de cómo hacerlo:
           </p>
-          <!-- <div class="imagens-qr">
-            <img src="../assets/vueRouterNavegacion.JPG" alt="vue Router Navegacion Programática" class="imagen">
-          </div> -->
 
           <div class="code-terminal">
             <div class="code-header">
@@ -248,35 +241,40 @@ const router = createRouter({
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <pre><code>
-&lt;script setup&gt;
-import { useRouter } from 'vue-router'
+            <pre class="pre-dark"><code>
+&lt;script <span class="t-key">setup</span>&gt;
+<span class="t-comment">// Importamos el router desde Vue Router</span>
+<span class="t-key">import</span> &#123; <span class="t-ident">useRouter</span> &#125; <span class="t-key">from</span> <span class="t-string">'vue-router'</span>
 
-// Dentro de un componente Vue
-export default {
-  methods: {
-    irAListaProductos() {
-      this.$router.push('/lista-productos')
-    }
-  }
-}
+<span class="t-comment">// Obtenemos la instancia del router</span>
+<span class="t-key">const</span> <span class="t-ident">router</span> = <span class="t-func">useRouter</span>()
+
+<span class="t-comment">// Función de navegación programática</span>
+<span class="t-key">const</span> <span class="t-ident">irAListaProductos</span> = () =&gt; &#123;
+  <span class="t-ident">router</span>.<span class="t-func">push</span>(<span class="t-string">'/lista-productos'</span>)
+&#125;
 &lt;/script&gt;
-          </code></pre>
+</code></pre>
           </div>
 
-
+          <div class="conclusion-qr">
+            <h6>
+              Conclusión:
+            </h6>
+            <p>
+              Vue Router es una herramienta poderosa y flexible para manejar el enrutamiento en las aplicaciones Vue.
+              Gracias a su integración nativa con el ecosistema de Vue, permite una navegación fluida y estructurada
+              dentro
+              de aplicaciones de una sola página. Con características como el enrutamiento dinámico, el enrutamiento
+              anidado
+              y las redirecciones, los desarrolladores pueden crear interfaces más organizadas, escalables y fáciles de
+              mantener. En conjunto, Vue Router mejora significativamente la experiencia del usuario al permitir
+              transiciones rápidas entre vistas sin recargar la página.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="conclusion-qr">
-        <h6>
-          Conclusión:
-        </h6>
-        <p>
-          Vue Router es una herramienta poderosa y flexible para manejar el enrutamiento en tus aplicaciones Vue. Con
-          características como el enrutamiento dinámico, el enrutamiento anidado y las redirecciones, puedes crear
-          aplicaciones complejas y fáciles de navegar.
-        </p>
-      </div>
+
     </div>
 
   </q-page>
@@ -303,7 +301,7 @@ export default {
   font-family: 'prototype', sans-serif;
   font-size: 4rem;
   padding: 0 0 0 15px;
-  margin: 10px 60px 10px 32px;
+  margin: 10px 15px 10px 32px;
 }
 
 .router-qr h6 {
@@ -330,63 +328,8 @@ export default {
   font-family: 'prototype', sans-serif;
 }
 
-/* .imagen-qr {
-  margin-bottom: 10px;
-} */
-
-/* .imagen-qr img {
-  height: 60px;
-  filter: drop-shadow(1px 2px 3px black);
-  margin-left: 22px;
-  transition: transform 0.3s ease;
-} */
-
-/* .imagen-qr img:hover {
-  transform: scale(1.009);
-} */
-
-/* .imagens-qr {
-  display: flex;
-  justify-items: center;
-  flex-direction: column;
-} */
-
-/* .imagens-qr img {
-  width: 40rem;
-  height: 20rem;
-  filter: drop-shadow(2px 4px 6px black);
-  margin-left: 22px;
-  transition: transform 0.3s ease;
-} */
-
-/* .imagens-qr img:hover {
-  transform: scale(1.009);
-} */
-
-/* .imagenes-qr {
-  display: flex;
-  justify-items: center;
-  flex-direction: column;
-} */
-
-/* .imagenes-qr img {
-  width: 29rem;
-  height: 25rem;
-  filter: drop-shadow(2px 4px 6px black);
-  margin-left: 22px;
-  transition: transform 0.3s ease;
-  padding-bottom: 10px;
-} */
-
-/* .imagenes-qr img:hover {
-  transform: scale(1.009);
-} */
-
 .bloque-qr {
   display: flex;
-  justify-items: center;
-  margin-right: 15px;
-  /* flex-direction: row-reverse; */
 }
 
 .bloque-qr img {
@@ -434,7 +377,7 @@ export default {
   border-radius: 10px;
   font-family: 'Fira Code', monospace;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  margin: 10px 52px 10px 50px;
+  margin: 10px 52px 20px 50px;
   overflow-x: auto;
   cursor: pointer
 }
@@ -463,6 +406,10 @@ export default {
   background: #27c93f;
 }
 
+.conclusion-qr {
+  margin-top: 30px;
+}
+
 .conclusion-qr p {
   margin-bottom: 20px;
 }
@@ -470,6 +417,46 @@ export default {
 .conclusion-qr h6 {
   margin-bottom: 0;
   padding-bottom: 0;
+  font-size: 18px;
 }
 
+.pre-dark {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.t-tag {
+  color: #d4d4d4;
+}
+
+.t-attr {
+  color: #C586C0;
+}
+
+.t-key {
+  color: #569CD6;
+}
+
+.t-ident {
+  color: #9CDCFE;
+}
+
+.t-string {
+  color: #6A9955;
+}
+
+.t-fn {
+  color: #D16969;
+}
+
+.t-comment {
+  color: #ffffff;
+  opacity: 0.5;
+  font-style: normal;
+}
 </style>

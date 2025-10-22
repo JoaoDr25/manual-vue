@@ -26,7 +26,7 @@
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <pre><code>npm create vite@latest mi-proyecto</code></pre>
+            <pre><code><span style="color: #DCDCAA;">npm</span> create vite@latest mi-proyecto</code></pre>
           </div>
 
           <li>Durante la instalación, el asistente de Vite pedirá una serie de opciones para personalizar el proyecto.
@@ -42,14 +42,14 @@ Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 
              </div>
   <pre><code>
 ? Nombre del proyecto: › mi-proyecto-vue
-? ¿Deseas usar TypeScript? › No
-? ¿Deseas soporte para JSX? › No
-? ¿Deseas agregar Vue Router para aplicaciones de una sola página (SPA)? › Sí
-? ¿Deseas agregar Pinia para la gestión del estado? › No
-? ¿Deseas agregar Vitest para pruebas unitarias? › No
-? ¿Deseas agregar una solución de pruebas End-to-End (Cypress, Playwright)? › No
-? ¿Deseas agregar ESLint para la calidad del código? › Sí
-? ¿Deseas agregar Prettier para el formato del código? › Sí
+<span style="color: #DCDCAA;">? ¿Deseas</span> usar TypeScript? › No
+<span style="color: #DCDCAA;">? ¿Deseas</span> soporte para JSX? › No
+<span style="color: #DCDCAA;">? ¿Deseas</span> agregar Vue Router para aplicaciones de una sola página (<span style="color: #DCDCAA;">SPA</span>)? › Sí
+<span style="color: #DCDCAA;">? ¿Deseas</span> agregar Pinia para la gestión del estado? › No
+<span style="color: #DCDCAA;">? ¿Deseas</span> agregar Vitest para pruebas unitarias? › No
+<span style="color: #DCDCAA;">? ¿Deseas</span> agregar una solución de pruebas End-to-End (<span style="color: #DCDCAA;">Cypress</span>, Playwright)? › No
+<span style="color: #DCDCAA;">? ¿Deseas</span> agregar ESLint para la calidad del código? › Sí
+<span style="color: #DCDCAA;">? ¿Deseas</span> agregar Prettier para el formato del código? › Sí
   </code></pre>
 </div>
 
@@ -64,7 +64,7 @@ Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <pre><code>cd mi-proyecto npm install</code></pre>
+            <pre><code><span style="color: #DCDCAA;">cd</span> mi-proyecto <span style="color: #DCDCAA;">npm</span> install</code></pre>
           </div>
 
           <li>Ejecutar el siguiente comando para iniciar el servidor local. Podrás ver la aplicación corriendo en el
@@ -78,7 +78,7 @@ Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <pre><code>npm run dev</code></pre>
+            <pre><code><span style="color: #DCDCAA;">npm</span> run dev</code></pre>
           </div>
 
           <li>Abrir la dirección que aparece en la terminal para comprobar que el proyecto Vue 3 se ha creado
@@ -92,7 +92,7 @@ Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <pre><code>http://localhost:3000</code></pre>
+            <pre><code><span style="color: #569CD6;">http://localhost:3000</span></code></pre>
           </div>
 
         </ol>
@@ -130,6 +130,10 @@ Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
+}
+
+.creacion-qr span {
+  font-family: 'prototype', sans-serif;
 }
 
 .proyecto-qr {

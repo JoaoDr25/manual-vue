@@ -1,96 +1,136 @@
 <template>
-  <q-page padding class="pinia-qr">
+  <q-page class="pinia-qr">
     <div class="titulo-pinia">
       <h1>Pinia</h1> <img src="../assets/image-removebg-preview.png" alt="foto pinia">
     </div>
     <p>
-      Pinia es la librería recomendada para la gestión de estado en Vue 3.
-      Reemplaza a Vuex con una API más simple y clara.
+      Pinia es la librería oficial recomendada para la gestión de estado en Vue 3.
+      Reemplaza a Vuex con una API más simple, moderna y clara, basada en el Composition API.
+      Gracias a Pinia puedes compartir estados (datos reactivos) entre componentes sin tener que pasar props
+      manualmente. Esto facilita el mantenimiento de la aplicación y mejora la organización del código.
+    </p>
+    <p>
+
     </p>
     <h6>
-      Cada store en Pinia:
+      Instalación:
     </h6>
+    <p>
+      Antes de usar Pinia, debes instalarla con npm:
+    </p>
+    <div class="code-terminal" style="padding-bottom: 0; margin-bottom: 40px; margin-top: 20px;">
+      <div class="code-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <div class="terminal-body">
+      <pre><code><span style="color: #DCDCAA;">npm</span> install vue-router</code></pre>
+    </div>
+    </div>
+
+    <p>
+      Y luego integrarla en tu aplicación principal (por ejemplo, en main.js):
+    </p>
+
+    <div class="code-terminal" style="padding-bottom: 0; margin-bottom: 40px; margin-top: 20px;">
+      <div class="code-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <pre><code><span style="color: #DCDCAA;">npm</span> import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import App from './App.vue'
+
+const app = createApp(App)
+
+// Se crea una instancia de Pinia y se añade a la aplicación
+app.use(createPinia())
+
+app.mount('#app')
+</code></pre>
+    </div>
+
+    <h6>Conceptos Clave</h6>
+    <p>Cada store en Pinia actúa como un "módulo de estado" que puede contener:</p>
     <ul>
-      <li>Tiene un <span>state</span> reactivo (variables globales).</li>
-      <li>Tiene <span>actions</span> para modificar el estado.</li>
-      <li>Puede incluir <span>getters</span> para valores derivados.</li>
+      <li><span>State:</span> variables reactivas globales.</li>
+      <li><span>Actions:</span> métodos que modifican el estado.</li>
+      <li><span>Getters:</span> valores derivados del estado, similares a propiedades computadas.</li>
     </ul>
     <p>
-      Los stores se pueden usar en cualquier componente y también soportan persistencia
-      y tipado con TypeScript.
+      Los stores pueden usarse en cualquier componente, y también soportan persistencia, devtools y tipado con
+      TypeScript.
     </p>
     <h6>
       Ejemplo básico:
     </h6>
-    <!-- <div class="contenidoImagenes-qr">
-      <div class="imagenes-qr">
-        <p>Así es como se ve usar Pinia en términos de API. Se tiene que empezar creando un almacén:</p>
-        <img src="../assets/pinia01.JPG" alt="Pinia Store" class="imagen">
-      </div>
-
-      <div class="imagenes-qr">
-        <p>Y luego usarla en un componente:</p>
-        <img src="../assets/pinia02.JPG" alt="Pinia Store" class="imagen">
-      </div>
-    </div> -->
 
     <div class="main-qr">
-  <div class="first-qr">
-    <div class="code-terminal">
-      <div class="code-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-      </div>
-      <pre><code>
-import { defineStore } from 'pinia'
+      <div class="first-qr">
+        <div class="code-terminal">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <pre class="pre-dark"><code>
+<span class="t-key">import</span> &#123; <span class="t-ident">defineStore</span> &#125; <span class="t-key">from</span> <span class="t-string">'pinia'</span>
 
-export const useCounterStore = defineStore('counter', {
-  state: () =&gt; {
-    return { count: 0 }
-  },
+<span class="t-key">export const</span> <span class="t-ident">useCounterStore</span> = <span class="t-func">defineStore</span>(<span class="t-string">'counter'</span>, &#123;
+  <span class="t-prop">state</span>: () =&gt; &#123;
+    <span class="t-key">return</span> &#123; <span class="t-prop">count</span>: <span class="t-num">0</span> &#125;
+  &#125;,
 
-  // también se puede definir como
-  // state: () =&gt; ({ count: 0 })
+  <span class="t-comment">// también se puede definir como</span>
+  <span class="t-comment">// state: () =&gt; (&#123; count: 0 &#125;)</span>
   
-  actions: {
-    increment() {
-      this.count++
-    }
-  }
-})
-      </code></pre>
-    </div>
-  </div>
-
-  <div class="second-qr">
-    <div class="code-terminal">
-      <div class="code-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
+  <span class="t-prop">actions</span>: &#123;
+    <span class="t-func">increment</span>() &#123;
+      <span class="t-key">this</span>.<span class="t-prop">count</span>++
+    &#125;
+  &#125;
+&#125;)
+</code></pre>
+        </div>
       </div>
-      <pre><code>
-&lt;script setup&gt;
-import { useCounterStore } from '@stores/counter'
 
-const counter = useCounterStore()
+      <div class="second-qr">
+        <div class="code-terminal">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <pre class="pre-dark"><code>
+&lt;<span class="t-tag">script</span> <span class="t-attr">setup</span>&gt;
+<span class="t-key">import</span> &#123; <span class="t-ident">useCounterStore</span> &#125; <span class="t-key">from</span> <span class="t-string">'@stores/counter'</span>
 
-counter.count++
-// con autocompletado ✨
-counter.$patch({ count: counter.count + 1 })
-// o usando una acción en su lugar
-counter.increment()
-&lt;/script&gt;
+<span class="t-key">const</span> <span class="t-ident">counter</span> = <span class="t-func">useCounterStore</span>()
 
-&lt;template&gt;
-&lt;!-- Accede al estado desde el almacén directamente --&gt;
-&lt;div&gt;Current Count: &#123;&#123; counter.count &#125;&#125;&lt;/div&gt;
-&lt;/template&gt;
-      </code></pre>
+<span class="t-ident">counter</span>.<span class="t-prop">count</span>++
+<span class="t-comment">// con autocompletado ✨</span>
+<span class="t-ident">counter</span>.<span class="t-method">$patch</span>(&#123; <span class="t-prop">count</span>: <span class="t-ident">counter</span>.<span class="t-prop">count</span> + <span class="t-num">1</span> &#125;)
+<span class="t-comment">// o usando una acción en su lugar</span>
+<span class="t-ident">counter</span>.<span class="t-method">increment</span>()
+&lt;/<span class="t-tag">script</span>&gt;
+
+&lt;<span class="t-tag">template</span>&gt;
+  <span class="t-comment">&lt;!-- Accede al estado desde el almacén directamente --&gt;</span>
+  &lt;<span class="t-tag">div</span>&gt;Current Count: &#123;&#123; <span class="t-ident">counter</span>.<span class="t-prop">count</span> &#125;&#125;&lt;/<span class="t-tag">div</span>&gt;
+&lt;/<span class="t-tag">template</span>&gt;
+</code></pre>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+
+    <h6>En resumen</h6>
+    <p>Pinia ofrece una forma simple, reactiva y escalable de manejar el estado global en aplicaciones Vue 3.
+      Su integración nativa con Composition API, junto con la compatibilidad con Vue DevTools, la convierte en la opción
+      ideal para proyectos modernos.</p>
+    <p><em>En pocas líneas puedes tener un store funcional, fácilmente integrable y con soporte completo para TypeScript
+        y herramientas de depuración.</em></p>
 
 
   </q-page>
@@ -108,7 +148,7 @@ counter.increment()
   font-size: 4rem;
   font-weight: 100;
   padding: 0 0 0 15px;
-  margin: 20px 60px 10px 32px;
+  margin: 15px 10px 10px 32px;
 }
 
 .titulo-pinia {
@@ -148,24 +188,6 @@ counter.increment()
   font-family: 'prototype', sans-serif;
 }
 
-/* .imagenes-qr {
-  display: flex;
-  justify-items: center;
-  flex-direction: column;
-} */
-
-/* .imagenes-qr img {
-  width: 40rem;
-  height: 20rem;
-  filter: drop-shadow(2px 4px 6px black);
-  margin-left: 22px;
-  transition: transform 0.3s ease;
-} */
-
-/* .imagenes-qr img:hover {
-  transform: scale(1.009);
-} */
-
 .contenidoImagenes-qr {
   display: flex;
   margin-bottom: 10px;
@@ -181,7 +203,6 @@ counter.increment()
 .code-terminal {
   background: #1e1e1e;
   color: #e8e8e8;
-  padding: 1rem 1.5rem;
   border-radius: 10px;
   font-family: 'Fira Code', monospace;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -191,9 +212,11 @@ counter.increment()
 }
 
 .code-header {
+  background: #2b2b2b;
   display: flex;
-  gap: 6px;
-  margin-bottom: 0.5rem;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  position: relative;
 }
 
 .dot {
@@ -225,5 +248,45 @@ counter.increment()
 
 .second-qr {
   width: 50%;
+}
+
+.pre-dark {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.t-tag {
+  color: #d4d4d4;
+}
+
+.t-attr {
+  color: #C586C0;
+}
+
+.t-key {
+  color: #569CD6;
+}
+
+.t-ident {
+  color: #9CDCFE;
+}
+
+.t-string {
+  color: #6A9955;
+}
+
+.t-fn {
+  color: #D16969;
+}
+
+.t-comment {
+  color: #ffffff;
+  opacity: 0.5;
+  font-style: normal;
 }
 </style>

@@ -4,23 +4,19 @@
     <p>
       Las props son la principal forma de comunicación entre un componente padre y un componente hijo.
       Permiten pasar datos desde el padre al hijo, haciendo que los componentes sean más reutilizables y configurables.
-      En Vue 3, las props se definen directamente dentro del bloque &lt;script setup&gt; usando
-      <code>defineProps()</code>.
+      En Vue 3, las props se definen directamente dentro del bloque <span>&lt;script setup&gt;</span> usando
+      <span>defineProps()</span>.
       Además, se pueden validar sus tipos, asignar valores por defecto y hacerlas obligatorias.
     </p>
     <p>
       Las props son unidireccionales, es decir, los datos fluyen del padre al hijo, no al revés.
-      Si necesitas enviar información en sentido contrario, se hace con eventos personalizados (emits).
+      Si se necesita enviar información en sentido contrario, se hace con eventos personalizados <span>(emits)</span>.
     </p>
-    <!-- <div class="imagenes-qr">
-      <img src="../assets//props1.jpeg" alt="props1" class="imagen">
-    </div> -->
 
     <div class="blocks-qr">
 
-      
       <div class="first-qr">
-        <p>Componente hijo: BotonPersonalizado.vue</p>
+        <p><span>COMPONENTE HIJO:</span> BotonPersonalizado.vue</p>
 
         <div class="code-terminal">
           <div class="code-header">
@@ -28,31 +24,32 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>
+          <pre class="pre-dark"><code>
 &lt;template&gt;
-  &lt;q-btn :label=&quot;label&quot; :color=&quot;color&quot; /&gt;
+  &lt;q-btn <span class="t-attr">:label</span>=<span class="t-string">"label"</span> <span class="t-attr">:color</span>=<span class="t-string">"color"</span> /&gt;
 &lt;/template&gt;
 
-&lt;script setup&gt;
-// Definimos las props que recibe el componente
-const props = defineProps({
-  label: {
-    type: String,
-    required: true,
-    default: 'Botón por defecto'
+&lt;script <span class="t-attr">setup</span>&gt;
+<span class="t-comment">// Definimos las props que recibe el componente</span>
+<span class="t-key">const</span> props = <span class="t-fn">defineProps</span>({
+  <span class="t-attr">label</span>: {
+    <span class="t-attr">type</span>: <span class="t-fn">String</span>,
+    <span class="t-attr">required</span>: <span class="t-key">true</span>,
+    <span class="t-attr">default</span>: <span class="t-string">'Botón por defecto'</span>
   },
-  color: {
-    type: String,
-    default: 'secondary'
+  <span class="t-attr">color</span>: {
+    <span class="t-attr">type</span>: <span class="t-fn">String</span>,
+    <span class="t-attr">default</span>: <span class="t-string">'secondary'</span>
   }
 })
 &lt;/script&gt;
-          </code></pre>
+</code></pre>
+
         </div>
       </div>
 
       <div class="second-qr">
-        <p>Componente padre: PropsDemo.vue</p>
+        <p><span>COMPONENTE PADRE:</span> PropsDemo.vue</p>
 
         <div class="code-terminal">
           <div class="code-header">
@@ -60,25 +57,29 @@ const props = defineProps({
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>
+          <pre class="pre-dark"><code>
 &lt;template&gt;
-  &lt;q-page padding&gt;
+  &lt;q-page <span class="t-attr">padding</span>&gt;
     &lt;h2&gt;Ejemplo de Props&lt;/h2&gt;
-    &lt;!-- Se pasa la prop &quot;label&quot; al componente hijo --&gt;
-    &lt;BotonPersonalizado label=&quot;Haz clic aquí 🚀&quot; color=&quot;primary&quot; /&gt;
+    <span class="t-comment">&lt;!-- Se pasa la prop "label" al componente hijo --&gt;</span>
+    &lt;BotonPersonalizado 
+      <span class="t-attr">label</span>=<span class="t-string">"Haz clic aquí 🚀"</span> 
+      <span class="t-attr">color</span>=<span class="t-string">"primary"</span> 
+    /&gt;
   &lt;/q-page&gt;
 &lt;/template&gt;
 
-&lt;script setup&gt;
-import BotonPersonalizado from './BotonPersonalizado.vue'
+&lt;script <span class="t-attr">setup</span>&gt;
+<span class="t-key">import</span> BotonPersonalizado <span class="t-key">from</span> <span class="t-string">'./BotonPersonalizado.vue'</span>
 &lt;/script&gt;
-          </code></pre>
+</code></pre>
         </div>
-         <div class="frase-qr">
-        <p>En resumen, las props permiten crear componentes altamente reutilizables y personalizables,
-asegurando una comunicación clara entre componentes y manteniendo la unidireccionalidad de datos.
-Son esenciales en cualquier aplicación Vue bien estructurada. 💚</p>
-      </div>
+        <div class="frase-qr" style="margin-top: 25px;">
+          <p style=" font-size: 0.9rem;">En resumen, las props permiten crear componentes altamente reutilizables y
+            personalizables,
+            asegurando una comunicación clara entre componentes y manteniendo la unidireccionalidad de datos.
+            </p>
+        </div>
       </div>
 
     </div>
@@ -110,22 +111,6 @@ Son esenciales en cualquier aplicación Vue bien estructurada. 💚</p>
 .props-qr span {
   font-family: 'prototype', sans-serif;
 }
-
-/* .imagenes-qr {
-  display: flex;
-  justify-items: center;
-} */
-
-/* .imagenes-qr img {
-  width: 40rem;
-  filter: drop-shadow(2px 4px 6px black);
-  margin-left: 22px;
-  transition: transform 0.3s ease;
-} */
-
-/* .imagenes-qr img:hover {
-  transform: scale(1.009);
-} */
 
 .code-terminal {
   background: #1e1e1e;
@@ -167,5 +152,45 @@ Son esenciales en cualquier aplicación Vue bien estructurada. 💚</p>
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+}
+
+.pre-dark {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.t-tag {
+  color: #d4d4d4;
+}
+
+.t-attr {
+  color: #C586C0;
+}
+
+.t-key {
+  color: #569CD6;
+}
+
+.t-ident {
+  color: #9CDCFE;
+}
+
+.t-string {
+  color: #6A9955;
+}
+
+.t-fn {
+  color: #D16969;
+}
+
+.t-comment {
+  color: #ffffff;
+  opacity: 0.5;
+  font-style: normal;
 }
 </style>

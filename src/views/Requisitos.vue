@@ -1,7 +1,7 @@
 <template>
   <q-page padding class="requisitos-qr">
     <div class="logo-qr">
-      <h1>Requisitos de Instalación</h1> <img src="../assets/img instalacion.png" alt="logo de instalacion">
+      <h1 style="margin-right: 20px;">Requisitos de Instalación</h1> <img src="../assets/img instalacion.png" alt="logo de instalacion">
     </div>
     <p>
       Antes de comenzar a desarrollar aplicaciones con Vue.js, es fundamental asegurarse de cumplir con
@@ -52,7 +52,7 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>node -v <br>npm -v</code></pre>
+          <pre><code><span style="color: #DCDCAA;">node</span> -v <br><span style="color: #DCDCAA;">npm</span> -v</code></pre>
         </div>
 
         <p>Si no los tiene instalados, descárguelos desde el sitio oficial:
@@ -78,7 +78,7 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>npm create vite@latest test-vue</code></pre>
+          <pre><code><span style="color: #DCDCAA;">npm</span> create vite@latest test-vue</code></pre>
         </div>
 
         <p>
@@ -114,6 +114,7 @@
 }
 
 .requisitos-qr span {
+  font-family: 'prototype', sans-serif;
   font-size: 0.96rem;
   text-align: justify;
 }

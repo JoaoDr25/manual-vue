@@ -6,7 +6,7 @@
     </p>
     <ul>
       <li>Options API es ideal para proyectos pequeños o para quienes vienen de Vue 2, ya que organiza el código por
-        opciones (data, methods, computed, etc.).
+        opciones (<span>data</span>, <span>methods</span>, <span>computed</span>, etc.).
       </li>
       <li>Composition API es más potente y escalable, ya que organiza el código por funcionalidades y permite reutilizar
         lógica entre componentes mediante composables.</li>
@@ -14,41 +14,35 @@
     <p>
       Se puede migrar gradualmente de Options API a Composition API sin reescribir todo el proyecto.
     </p>
-    <!-- <div class="contenidoImagenes-qr">
-       <div class="imagenes-qr">
-        <h6>Options Api</h6>
-        <img src="../assets/optionsApi.jpeg" alt="optionsApi" class="imagen">
-      </div> -->
-
-      <!-- <div class="imagenes-qr">
-        <h6>Compositions Api</h6>
-        <img src="../assets/compositionsApi.jpeg" alt="compositionsApi" class="imagen">
-      </div> -->
 
     <div class="table-qr">
-      <table style="border-collapse: collapse; width: 100%; margin: 10px 0;">
-        <tr style="background-color: #42b883; color: white;">
-          <th style="padding:8px; text-align:center;">Aspecto</th>
-          <th style="padding:8px; text-align:center;">Options API</th>
-          <th style="padding:8px; text-align:center;">Composition API</th>
-        </tr>
-        <tr style="background-color: #f9f9f9;">
-          <td style="padding:8px; text-align: center;">Estructura</td>
-          <td style="padding:8px; text-align: center;">Basada en secciones (data, methods, etc.)</td>
-          <td style="padding:8px; text-align: center;">Basada en funciones reactivas (setup, ref, etc.)</td>
-        </tr>
-        <tr>
-          <td style="padding:8px; text-align: center;">Ventaja</td>
-          <td style="padding:8px; text-align: center;">Sencilla y clara para principiantes</td>
-          <td style="padding:8px; text-align: center;">Flexible y más fácil de reutilizar lógica</td>
-        </tr>
-        <tr style="background-color: #f9f9f9;">
-          <td style="padding:8px; text-align: center;">Recomendado para</td>
-          <td style="padding:8px; text-align: center;">Proyectos pequeños o mantenimiento de código legado</td>
-          <td style="padding:8px; text-align: center;">Proyectos medianos y grandes</td>
-        </tr>
-      </table>
-    </div>
+  <table style="border-collapse: collapse; width: 100%; margin: 10px 0;">
+    <thead>
+      <tr style="background-color: #42b883; color: white;">
+        <th style="padding:8px; text-align:center;">Aspecto</th>
+        <th style="padding:8px; text-align:center;">Options API</th>
+        <th style="padding:8px; text-align:center;">Composition API</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color: #f9f9f9;">
+        <td style="padding:8px; text-align: center;">Estructura</td>
+        <td style="padding:8px; text-align: center;">Basada en secciones (data, methods, etc.)</td>
+        <td style="padding:8px; text-align: center;">Basada en funciones reactivas (setup, ref, etc.)</td>
+      </tr>
+      <tr>
+        <td style="padding:8px; text-align: center;">Ventaja</td>
+        <td style="padding:8px; text-align: center;">Sencilla y clara para principiantes</td>
+        <td style="padding:8px; text-align: center;">Flexible y más fácil de reutilizar lógica</td>
+      </tr>
+      <tr style="background-color: #f9f9f9;">
+        <td style="padding:8px; text-align: center;">Recomendado para</td>
+        <td style="padding:8px; text-align: center;">Proyectos pequeños o mantenimiento de código legado</td>
+        <td style="padding:8px; text-align: center;">Proyectos medianos y grandes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
     <div class="main-qr">
       <div class="first-qr">
@@ -58,30 +52,31 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>
+          <pre class="pre-dark" style="margin-bottom: 0;"><code>
 &lt;h3&gt;Options API&lt;/h3&gt;
+
 &lt;template&gt;
-  &lt;q-page padding&gt;
-    &lt;q-btn @click=&quot;incrementar&quot; label=&quot;Click&quot; /&gt;
-    &lt;p&gt;{{ contador }}&lt;/p&gt;
+  &lt;q-page <span class="t-attr">padding</span>&gt;
+    &lt;q-btn <span class="t-attr">@click</span>=<span class="t-string">&quot;incrementar&quot;</span> <span class="t-attr">label</span>=<span class="t-string">&quot;Click&quot;</span> /&gt;
+    &lt;p&gt;&#123;&#123; <span class="t-ident">contador</span> &#125;&#125;&lt;/p&gt;
   &lt;/q-page&gt;
 &lt;/template&gt;
 
 &lt;script&gt;
-export default {
-  data() {
-    return {
-      contador: 0
+<span class="t-key">export default</span> {
+  <span class="t-key">data</span>() {
+    <span class="t-key">return</span> {
+      <span class="t-ident">contador</span>: <span class="t-num">0</span>
     }
   },
-  methods: {
-    incrementar() {
-      this.contador++
+  <span class="t-key">methods</span>: {
+    <span class="t-fn">incrementar</span>() {
+      <span class="t-key">this</span>.<span class="t-ident">contador</span>++
     }
   }
 }
 &lt;/script&gt;
-          </code></pre>
+</code></pre>
         </div>
       </div>
 
@@ -92,33 +87,30 @@ export default {
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code>
+          <pre class="pre-dark" style="margin-bottom: 21px;"><code>
 &lt;h3&gt;Composition API&lt;/h3&gt;
+
 &lt;template&gt;
-  &lt;q-page padding&gt;
-    &lt;q-btn @click=&quot;incrementar&quot; label=&quot;Click&quot; /&gt;
-    &lt;p&gt;{{ contador }}&lt;/p&gt;
+  &lt;q-page <span class="t-attr">padding</span>&gt;
+    &lt;q-btn <span class="t-attr">@click</span>=<span class="t-string">&quot;incrementar&quot;</span> <span class="t-attr">label</span>=<span class="t-string">&quot;Click&quot;</span> /&gt;
+    &lt;p&gt;&#123;&#123; <span class="t-ident">contador</span> &#125;&#125;&lt;/p&gt;
   &lt;/q-page&gt;
 &lt;/template&gt;
 
-&lt;script setup&gt;
-import { ref } from 'vue'
+&lt;script <span class="t-attr">setup</span>&gt;
+<span class="t-key">import</span> { <span class="t-ident">ref</span> } <span class="t-key">from</span> <span class="t-string">'vue'</span>
 
-// Estado reactivo
-const contador = ref(0)
+<span class="t-comment">// Estado reactivo</span>
+<span class="t-key">const</span> <span class="t-ident">contador</span> = <span class="t-fn">ref</span>(<span class="t-num">0</span>)
 
-// Función para modificar el estado
-const incrementar = () =&gt; contador.value++
+<span class="t-comment">// Función para modificar el estado</span>
+<span class="t-key">const</span> <span class="t-ident">incrementar</span> = <span class="t-key">()</span> =&gt; <span class="t-ident">contador</span>.<span class="t-key">value</span>++
 &lt;/script&gt;
-&lt;/code&gt;&lt;/pre&gt;
-          </code></pre>
+</code></pre>
         </div>
 
         <div class="frase-qr">
-         
-            <p>En resumen, Vue ofrece dos estilos de desarrollo complementarios:</p>
-            <p style="margin-top: 0;">Options API prioriza la claridad y simplicidad, mientras que Composition API ofrece mayor escalabilidad y control sobre la lógica.</p>
-         
+            <p>En resumen, Vue ofrece dos estilos de desarrollo complementarios: Options API prioriza la claridad y simplicidad, mientras que Composition API ofrece mayor escalabilidad y control sobre la lógica.</p>
         </div>
 
       </div>
@@ -154,36 +146,6 @@ const incrementar = () =&gt; contador.value++
 .opcion-qr span {
   font-family: 'prototype', sans-serif;
 }
-
-/* .contenidoImagenes-qr {
-  display: flex;
-} */
-
-/* .contenidoImagenes-qr h6 {
-  text-align: center;
-  margin: 10px 0 10px 0;
-  font-family: 'prototype', sans-serif;
-  font-size: 18px;
-} */
-
-/* .imagenes-qr {
-  display: flex;
-  justify-items: center;
-  flex-direction: column;
-  margin-bottom: 10px;
-} */
-
-/* .imagenes-qr img {
-  width: 40rem;
-  height: 20rem;
-  filter: drop-shadow(2px 4px 6px black);
-  margin-left: 22px;
-  transition: transform 0.3s ease;
-} */
-
-/* .imagenes-qr img:hover {
-  transform: scale(1.009);
-} */
 
 .table-qr {
   margin: 20px 60px 30px 50px;
@@ -227,6 +189,7 @@ const incrementar = () =&gt; contador.value++
 
 .main-qr {
   display: flex;
+  height: fit-content;
 }
 
 .first-qr {
@@ -240,7 +203,46 @@ const incrementar = () =&gt; contador.value++
 
 .frase-qr p {
   font-size: 0.9rem;
-  margin: 20px 56px 0 56px;
-  text-align: center;
+  margin: 20px 50px 0 50px;
+}
+
+.pre-dark {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.t-tag {
+  color: #d4d4d4;
+}
+
+.t-attr {
+  color: #C586C0;
+}
+
+.t-key {
+  color: #569CD6;
+}
+
+.t-ident {
+  color: #9CDCFE;
+}
+
+.t-string {
+  color: #6A9955;
+}
+
+.t-fn {
+  color: #D16969;
+}
+
+.t-comment {
+  color: #ffffff;
+  opacity: 0.5;
+  font-style: normal;
 }
 </style>
