@@ -36,7 +36,7 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre><code><span style="color: #DCDCAA;">npm</span> install vue-router</code></pre>
+          <pre style="margin: 14px 20px;"><code><span style="color: #DCDCAA;">npm</span> install vue-router</code></pre>
         </div>
 
         <p>
@@ -46,14 +46,18 @@
           correspondiente se renderiza.
         </p>
         <p>
-          Para realizar esta configuración, primero se debe importar la función <span>createRouter</span> desde el paquete
-          <span>vue-router</span>, junto con <span>createWebHistory</span> si deseamos habilitar un historial de navegación más tradicional basado
+          Para realizar esta configuración, primero se debe importar la función <span>createRouter</span> desde el
+          paquete
+          <span>vue-router</span>, junto con <span>createWebHistory</span> si deseamos habilitar un historial de
+          navegación más tradicional basado
           en URLs limpias. Luego, definimos un arreglo de rutas, donde cada una se representa como un objeto que
           especifica un <span>path</span>, un <span>name</span> y el <span>component</span> que se mostrará.
         </p>
         <p>
-          En el ejemplo, hemos definido dos rutas principales: una para la página de inicio (<span>/</span>) y otra para la sección
-          de lista de productos (<span>/lista-productos</span>). Cada ruta está vinculada a un componente Vue distinto, el cual se
+          En el ejemplo, hemos definido dos rutas principales: una para la página de inicio (<span>/</span>) y otra para
+          la sección
+          de lista de productos (<span>/lista-productos</span>). Cada ruta está vinculada a un componente Vue distinto,
+          el cual se
           renderizará dinámicamente cada vez que el usuario visite la ruta correspondiente, permitiendo una navegación
           fluida y sin recargas completas de la página.
         </p>
@@ -65,7 +69,7 @@
           <span class="dot yellow"></span>
           <span class="dot green"></span>
         </div>
-        <pre class="pre-dark" style="margin-bottom: 0;"><code>
+        <pre class="pre-dark" style="margin-bottom: 6px; margin-top: 0;"><code>
 &lt;script <span class="t-key">setup</span>&gt;
 <span class="t-key">import</span> &#123; <span class="t-ident">createRouter</span>, <span class="t-ident">createWebHistory</span> &#125; <span class="t-key">from</span> <span class="t-string">'vue-router'</span>
 <span class="t-key">import</span> <span class="t-ident">VistaInicio</span> <span class="t-key">from</span> <span class="t-string">'./views/VistaInicio.vue'</span>
@@ -111,7 +115,7 @@
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <pre class="pre-dark"><code>
+            <pre class="pre-dark" style="margin-bottom: 94px; margin-top: 0;"><code>
 &lt;script <span class="t-key">setup</span>&gt;
 <span class="t-key">import</span> &#123; <span class="t-ident">createRouter</span>, <span class="t-ident">createWebHistory</span> &#125; <span class="t-key">from</span> <span class="t-string">'vue-router'</span>
 <span class="t-key">import</span> <span class="t-ident">VistaProducto</span> <span class="t-key">from</span> <span class="t-string">'./views/VistaProducto.vue'</span>
@@ -148,7 +152,7 @@
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <pre class="pre-dark"><code>
+            <pre class="pre-dark" style="margin-bottom: 10px; margin-top: 0;"><code>
 &lt;script <span class="t-key">setup</span>&gt;
 <span class="t-key">import</span> &#123; <span class="t-ident">createRouter</span> &#125; <span class="t-key">from</span> <span class="t-string">'vue-router'</span>
 <span class="t-key">import</span> <span class="t-ident">VistaListaProductos</span> <span class="t-key">from</span> <span class="t-string">'./views/VistaListaProductos.vue'</span>
@@ -193,7 +197,7 @@
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <pre class="pre-dark" style="margin-bottom: 0;"><code>
+            <pre class="pre-dark" style="margin-bottom: 10px; margin-top: 0;"><code>
 &lt;script <span class="t-key">setup</span>&gt;
 <span class="t-key">import</span> &#123; <span class="t-ident">createRouter</span> &#125; <span class="t-key">from</span> <span class="t-string">'vue-router'</span>
 <span class="t-key">import</span> <span class="t-ident">VistaProducto</span> <span class="t-key">from</span> <span class="t-string">'./views/VistaProducto.vue'</span>
@@ -241,7 +245,7 @@
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <pre class="pre-dark"><code>
+            <pre class="pre-dark" style="margin-bottom: 100px; margin-top: 0;"><code>
 &lt;script <span class="t-key">setup</span>&gt;
 <span class="t-comment">// Importamos el router desde Vue Router</span>
 <span class="t-key">import</span> &#123; <span class="t-ident">useRouter</span> &#125; <span class="t-key">from</span> <span class="t-string">'vue-router'</span>
@@ -258,9 +262,9 @@
           </div>
 
           <div class="conclusion-qr">
-            <h6>
+            <!-- <h6>
               Conclusión:
-            </h6>
+            </h6> -->
             <p>
               Vue Router es una herramienta poderosa y flexible para manejar el enrutamiento en las aplicaciones Vue.
               Gracias a su integración nativa con el ecosistema de Vue, permite una navegación fluida y estructurada
@@ -372,20 +376,24 @@
 
 .code-terminal {
   background: #1e1e1e;
-  color: #e8e8e8;
-  padding: 1rem 1.5rem;
+  color: #d4d4d4;
   border-radius: 10px;
-  font-family: 'Fira Code', monospace;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   margin: 10px 52px 20px 50px;
-  overflow-x: auto;
-  cursor: pointer
+  overflow: hidden;
+  font-family: 'Fira Code', monospace;
 }
 
 .code-header {
+  background: #2d2d2d;
+  padding: 8px 12px;
   display: flex;
   gap: 6px;
-  margin-bottom: 0.5rem;
+}
+
+.pre-dark {
+  padding: 16px 24px;
+  cursor: text;
 }
 
 .dot {
@@ -410,24 +418,10 @@
   margin-top: 30px;
 }
 
-.conclusion-qr p {
-  margin-bottom: 20px;
-}
-
 .conclusion-qr h6 {
   margin-bottom: 0;
   padding-bottom: 0;
   font-size: 18px;
-}
-
-.pre-dark {
-  background: #1e1e1e;
-  color: #d4d4d4;
-  padding: 16px;
-  border-radius: 8px;
-  font-family: 'Fira Code', monospace;
-  line-height: 1.5;
-  overflow-x: auto;
 }
 
 .t-tag {

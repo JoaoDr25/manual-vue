@@ -152,6 +152,7 @@
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   font-family: 'prototype', sans-serif;
+  margin-top: 0;
 }
 
 .terminal-body p {

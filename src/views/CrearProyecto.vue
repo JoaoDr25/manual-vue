@@ -17,9 +17,7 @@
         <ol>
           <li>Inicie un nuevo proyecto con Vite, una herramienta moderna que configura automáticamente Vue 3 con un
             entorno rápido y ligero.</li>
-          <!-- <div class="imagenes-qr">
-            <img src="../assets/crearProyecto1.jpeg" alt="crearProyecto1" class="imagen">
-          </div> -->
+        
           <div class="code-terminal">
             <div class="code-header">
               <span class="dot red"></span>
@@ -31,9 +29,7 @@
 
           <li>Durante la instalación, el asistente de Vite pedirá una serie de opciones para personalizar el proyecto.
 Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 3 con JavaScript y Vue Router habilitado para aplicaciones SPA.</li>
-          <!-- <div class="imagenes-qr">
-            <img src="../assets/captura.jpg" alt="seleccionarPlantilla" class="imagen">
-          </div> -->
+         
           <div class="code-terminal">
             <div class="code-header">
               <span class="dot red"></span>
@@ -55,9 +51,7 @@ Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 
 
           <li>Una vez creado el proyecto, entrar en la carpeta y ejecuta la instalación de dependencias.
             Esto descargará los paquetes necesarios para que Vue funcione correctamente.</li>
-          <!-- <div class="imagenes-qr">
-            <img src="../assets/ingresarCarpeta.jpg" alt="ingresarCarpeta" class="imagen">
-          </div> -->
+       
           <div class="code-terminal">
             <div class="code-header">
               <span class="dot red"></span>
@@ -69,9 +63,7 @@ Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 
 
           <li>Ejecutar el siguiente comando para iniciar el servidor local. Podrás ver la aplicación corriendo en el
             navegador.</li>
-          <!-- <div class="imagenes-qr">
-            <img src="../assets/ejecutarServidor.jpg" alt="iniciarServidor" class="imagen">
-          </div> -->
+         
           <div class="code-terminal">
             <div class="code-header">
               <span class="dot red"></span>
@@ -83,9 +75,7 @@ Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 
 
           <li>Abrir la dirección que aparece en la terminal para comprobar que el proyecto Vue 3 se ha creado
             correctamente. Si se ve la pantalla de bienvenida de Vite + Vue, ¡todo está listo para empezar!</li>
-          <!-- <div class="imagenes-qr" style="height: 105px;">
-            <img src="../assets/mostrarTerminal.jpg" alt="mostrarTerminal" class="imagen">
-          </div> -->
+      
           <div class="code-terminal">
             <div class="code-header">
               <span class="dot red"></span>
@@ -182,22 +172,6 @@ Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 
   margin: 20px;
 }
 
-/* .imagenes-qr {
-  display: flex;
-  justify-items: center;
-}
-
-.imagenes-qr img {
-  width: 40rem;
-  filter: drop-shadow(2px 4px 6px black);
-  transition: transform 0.3s ease;
-  margin: 5px 50px 5px 30px;
-}
-
-.imagenes-qr img:hover {
-  transform: scale(1.009);
-} */
-
 .code-terminal {
   background: #1e1e1e;
   color: #d4d4d4;
@@ -207,7 +181,6 @@ Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 
   margin: 0.5rem 3.5rem 1.5rem 1rem;
   overflow: hidden;
   font-family: 'Fira Code', monospace;
-  cursor: pointer;
 }
 
 .code-header {
@@ -240,5 +213,6 @@ pre {
   margin: 0;
   padding: 1rem 1.2rem;
   overflow-x: auto;
+  cursor: text;
 }
 </style>

@@ -133,22 +133,6 @@
   margin: 20px 60px 10px 50px;
 }
 
-/* .imagen-qr {
-  margin-bottom: 10px;
-} */
-
-/* .imagen-qr img {
-  height: 60px;
-  filter: drop-shadow(1px 2px 3px black);
-  margin-left: 22px;
-  transition: transform 0.3s ease;
-  margin: 20px 60px 10px 50px;
-} */
-
-/* .imagen-qr img:hover {
-  transform: scale(1.009);
-} */
-
 .code-terminal {
   background: #1e1e1e;
   color: #d4d4d4;
@@ -157,7 +141,10 @@
   margin: 10px 52px 10px 50px;
   overflow: hidden;
   font-family: 'Fira Code', monospace;
-  cursor: pointer;
+}
+
+.code-terminal pre {
+  cursor: text;
 }
 
 .code-header {

@@ -32,7 +32,7 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre class="pre-dark"><code>
+          <pre class="pre-dark" style="margin-top: 0;"><code>
 &lt;template&gt;
   &lt;q-page <span class="t-attr">padding</span>&gt;
   &lt;h2&gt;Directivas en acción&lt;/h2&gt;
@@ -63,10 +63,10 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre class="pre-dark" style="margin-bottom: 0; padding-bottom: 10px;"><code>
-     <span class="t-comment">&lt;!-- v-bind: enlace dinámico --&gt;</span>
-    &lt;img <span class="t-attr">:src</span>=<span class="t-string">&quot;imagen&quot;</span> <span class="t-attr">alt</span>=<span class="t-string">&quot;Logo de Vue&quot;</span> <span class="t-attr">width</span>=<span class="t-string">&quot;100&quot;</span> /&gt;
-  &lt;/q-page&gt;
+          <pre class="pre-dark" style="margin-bottom: 0; padding-bottom: 10px; margin-top: 0;"><code>
+<span class="t-comment">&lt;!-- v-bind: enlace dinámico --&gt;</span>
+&lt;img <span class="t-attr">:src</span>=<span class="t-string">&quot;imagen&quot;</span> <span class="t-attr">alt</span>=<span class="t-string">&quot;Logo de Vue&quot;</span> <span class="t-attr">width</span>=<span class="t-string">&quot;100&quot;</span> /&gt;
+&lt;/q-page&gt;
 &lt;/template&gt;
 
 &lt;script <span class="t-attr">setup</span>&gt;
@@ -135,20 +135,24 @@
 
 .code-terminal {
   background: #1e1e1e;
-  color: #e8e8e8;
-  padding: 1rem 1.5rem;
+  color: #d4d4d4;
   border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 10px 52px 20px 50px;
+  overflow: hidden;
   font-family: 'Fira Code', monospace;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  margin: 10px 60px 30px 50px;
-  overflow-x: auto;
-  cursor: pointer
 }
 
 .code-header {
+  background: #2d2d2d;
+  padding: 8px 12px;
   display: flex;
   gap: 6px;
-  margin-bottom: 0.5rem;
+}
+
+.pre-dark {
+  padding: 16px 24px;
+  cursor: text;
 }
 
 .dot {
@@ -167,16 +171,6 @@
 
 .green {
   background: #27c93f;
-}
-
-.pre-dark {
-  background: #1e1e1e;
-  color: #d4d4d4;
-  padding: 16px;
-  border-radius: 8px;
-  font-family: 'Fira Code', monospace;
-  line-height: 1.5;
-  overflow-x: auto;
 }
 
 .t-tag {

@@ -25,7 +25,7 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-         <pre class="pre-dark" style="margin-bottom: 0;"><code>
+         <pre class="pre-dark" style="margin-bottom: 0; margin-top: 0;"><code>
 &lt;template&gt;
   &lt;q-page <span class="t-attr">padding</span>&gt;
     &lt;h2&gt;onMounted en acción&lt;/h2&gt;
@@ -56,7 +56,7 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-<pre class="pre-dark" style="margin-bottom: 21px;"><code>
+<pre class="pre-dark" style="margin-bottom: 30px; margin-top: 0;"><code>
 <span class="t-comment">// Se ejecuta cada vez que cambia un valor reactivo</span>
 <span class="t-fn">onUpdated</span>(<span class="t-key">()</span> =&gt; &#123;
   <span class="t-fn">console</span>.<span class="t-fn">log</span>(<span class="t-string">'🔁 El componente se ha actualizado'</span>)
@@ -120,7 +120,7 @@
 
 .first-qr {
   width: 50%;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .second-qr {
@@ -129,20 +129,24 @@
 
 .code-terminal {
   background: #1e1e1e;
-  color: #e8e8e8;
-  padding: 1rem 1.5rem;
+  color: #d4d4d4;
   border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 10px 52px 10px 50px;
+  overflow: hidden;
   font-family: 'Fira Code', monospace;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  margin: 10px 52px 0px 50px;
-  overflow-x: auto;
-  cursor: pointer
 }
 
 .code-header {
+  background: #2d2d2d;
+  padding: 8px 12px;
   display: flex;
   gap: 6px;
-  margin-bottom: 0.5rem;
+}
+
+.pre-dark {
+  padding: 16px 24px;
+  cursor: text;
 }
 
 .dot {
@@ -165,21 +169,12 @@
 
 .frase-qr {
   display: flex;
-  text-align: center;
+  text-align: justify;
 }
 
 .frase-qr p {
   font-size: 0.9rem;
-  margin: 20px 56px 0 56px;
-}
-.pre-dark {
-  background: #1e1e1e;
-  color: #d4d4d4;
-  padding: 16px;
-  border-radius: 8px;
-  font-family: 'Fira Code', monospace;
-  line-height: 1.5;
-  overflow-x: auto;
+  margin: 10px 56px 0 56px;
 }
 
 .t-tag {

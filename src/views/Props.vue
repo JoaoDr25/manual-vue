@@ -24,7 +24,7 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre class="pre-dark"><code>
+          <pre class="pre-dark" style="margin-top: 0;"><code>
 &lt;template&gt;
   &lt;q-btn <span class="t-attr">:label</span>=<span class="t-string">"label"</span> <span class="t-attr">:color</span>=<span class="t-string">"color"</span> /&gt;
 &lt;/template&gt;
@@ -57,7 +57,7 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre class="pre-dark"><code>
+          <pre class="pre-dark" style="margin-bottom: 8px; margin-top: 0;"><code>
 &lt;template&gt;
   &lt;q-page <span class="t-attr">padding</span>&gt;
     &lt;h2&gt;Ejemplo de Props&lt;/h2&gt;
@@ -114,20 +114,24 @@
 
 .code-terminal {
   background: #1e1e1e;
-  color: #e8e8e8;
-  padding: 1rem 1.5rem;
+  color: #d4d4d4;
   border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 10px 52px 20px 50px;
+  overflow: hidden;
   font-family: 'Fira Code', monospace;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  margin: 10px 52px 10px 50px;
-  overflow-x: auto;
-  cursor: pointer
 }
 
 .code-header {
+  background: #2d2d2d;
+  padding: 8px 12px;
   display: flex;
   gap: 6px;
-  margin-bottom: 0.5rem;
+}
+
+.pre-dark {
+  padding: 16px 24px;
+  cursor: text;
 }
 
 .dot {
@@ -152,16 +156,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-}
-
-.pre-dark {
-  background: #1e1e1e;
-  color: #d4d4d4;
-  padding: 16px;
-  border-radius: 8px;
-  font-family: 'Fira Code', monospace;
-  line-height: 1.5;
-  overflow-x: auto;
 }
 
 .t-tag {

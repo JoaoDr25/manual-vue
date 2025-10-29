@@ -9,60 +9,66 @@
       Gracias a Pinia puedes compartir estados (datos reactivos) entre componentes sin tener que pasar props
       manualmente. Esto facilita el mantenimiento de la aplicación y mejora la organización del código.
     </p>
-    <p>
 
-    </p>
-    <h6>
-      Instalación:
-    </h6>
-    <p>
-      Antes de usar Pinia, debes instalarla con npm:
-    </p>
-    <div class="code-terminal" style="padding-bottom: 0; margin-bottom: 40px; margin-top: 20px;">
-      <div class="code-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-      </div>
-      <div class="terminal-body">
-      <pre><code><span style="color: #DCDCAA;">npm</span> install vue-router</code></pre>
-    </div>
-    </div>
+    <div class="blocks-qr">
+      <div class="part01-qr">
+        <h6>
+          Instalación:
+        </h6>
+        <p>
+          Antes de usar Pinia, debes instalarla con npm:
+        </p>
+        <div class="code-terminal" style="padding-bottom: 0; margin-bottom: 40px; margin-top: 20px;">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="terminal-body">
+            <pre><code><span style="color: #DCDCAA;">npm</span> install vue-router</code></pre>
+          </div>
+        </div>
 
-    <p>
-      Y luego integrarla en tu aplicación principal (por ejemplo, en main.js):
-    </p>
+        <p>
+          Y luego integrarla en tu aplicación principal (por ejemplo, en main.js):
+        </p>
 
-    <div class="code-terminal" style="padding-bottom: 0; margin-bottom: 40px; margin-top: 20px;">
-      <div class="code-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-      </div>
-      <pre><code><span style="color: #DCDCAA;">npm</span> import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import App from './App.vue'
+        <div class="code-terminal" style="padding-bottom: 0; margin-bottom: 40px; margin-top: 20px;">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <pre class="pre-dark" style="margin-top: 0;"><code><span style="color: #DCDCAA;"></span> 
+<span class="t-key">import</span> &#123; <span class="t-ident">createApp</span> &#125; <span class="t-key">from</span> <span class="t-string">'vue'</span>
+<span class="t-key">import</span> &#123; <span class="t-ident">createPinia</span> &#125; <span class="t-key">from</span> <span class="t-string">'pinia'</span>
+<span class="t-key">import</span> <span class="t-ident">App</span> <span class="t-key">from</span> <span class="t-string">'./App.vue'</span>
 
-const app = createApp(App)
+<span class="t-key">const</span> <span class="t-ident">app</span> = <span class="t-func">createApp</span>(<span class="t-ident">App</span>)
 
-// Se crea una instancia de Pinia y se añade a la aplicación
-app.use(createPinia())
+<span class="t-comment">// Se crea una instancia de Pinia y se añade a la aplicación</span>
+<span class="t-ident">app</span>.<span class="t-method">use</span>(<span class="t-func">createPinia</span>())
 
-app.mount('#app')
+<span class="t-ident">app</span>.<span class="t-method">mount</span>(<span class="t-string">'#app'</span>)
 </code></pre>
+        </div>
+      </div>
+
+      <div class="part02-qr">
+        <h6>Conceptos Clave</h6>
+        <p>Cada store en Pinia actúa como un "módulo de estado" que puede contener:</p>
+        <ul>
+          <li><span>State:</span> variables reactivas globales.</li>
+          <li><span>Actions:</span> métodos que modifican el estado.</li>
+          <li><span>Getters:</span> valores derivados del estado, similares a propiedades computadas.</li>
+        </ul>
+        <p>
+          Los stores pueden usarse en cualquier componente, y también soportan persistencia, devtools y tipado con
+          TypeScript.
+        </p>
+      </div>
     </div>
 
-    <h6>Conceptos Clave</h6>
-    <p>Cada store en Pinia actúa como un "módulo de estado" que puede contener:</p>
-    <ul>
-      <li><span>State:</span> variables reactivas globales.</li>
-      <li><span>Actions:</span> métodos que modifican el estado.</li>
-      <li><span>Getters:</span> valores derivados del estado, similares a propiedades computadas.</li>
-    </ul>
-    <p>
-      Los stores pueden usarse en cualquier componente, y también soportan persistencia, devtools y tipado con
-      TypeScript.
-    </p>
     <h6>
       Ejemplo básico:
     </h6>
@@ -75,7 +81,7 @@ app.mount('#app')
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre class="pre-dark"><code>
+          <pre class="pre-dark" style="margin-top: 0;"><code>
 <span class="t-key">import</span> &#123; <span class="t-ident">defineStore</span> &#125; <span class="t-key">from</span> <span class="t-string">'pinia'</span>
 
 <span class="t-key">export const</span> <span class="t-ident">useCounterStore</span> = <span class="t-func">defineStore</span>(<span class="t-string">'counter'</span>, &#123;
@@ -103,7 +109,7 @@ app.mount('#app')
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre class="pre-dark"><code>
+          <pre class="pre-dark" style="margin-top: 0;"><code>
 &lt;<span class="t-tag">script</span> <span class="t-attr">setup</span>&gt;
 <span class="t-key">import</span> &#123; <span class="t-ident">useCounterStore</span> &#125; <span class="t-key">from</span> <span class="t-string">'@stores/counter'</span>
 
@@ -125,7 +131,7 @@ app.mount('#app')
       </div>
     </div>
 
-    <h6>En resumen</h6>
+    <!-- <h6>En resumen</h6> -->
     <p>Pinia ofrece una forma simple, reactiva y escalable de manejar el estado global en aplicaciones Vue 3.
       Su integración nativa con Composition API, junto con la compatibilidad con Vue DevTools, la convierte en la opción
       ideal para proyectos modernos.</p>
@@ -202,21 +208,24 @@ app.mount('#app')
 
 .code-terminal {
   background: #1e1e1e;
-  color: #e8e8e8;
+  color: #d4d4d4;
   border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 10px 52px 20px 50px;
+  overflow: hidden;
   font-family: 'Fira Code', monospace;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  margin: 10px 52px 10px 50px;
-  overflow-x: auto;
-  cursor: pointer
 }
 
 .code-header {
-  background: #2b2b2b;
+  background: #2d2d2d;
+  padding: 8px 12px;
   display: flex;
-  align-items: center;
-  padding: 0.4rem 0.8rem;
-  position: relative;
+  gap: 6px;
+}
+
+.pre-dark {
+  padding: 16px 24px;
+  /* cursor:text; */
 }
 
 .dot {
@@ -237,6 +246,18 @@ app.mount('#app')
   background: #27c93f;
 }
 
+.blocks-qr {
+display: flex;
+}
+
+.part01-qr {
+width: 50%;
+}
+
+.part02-qr {
+width: 50%;
+}
+
 .main-qr {
   display: flex;
 }
@@ -248,16 +269,6 @@ app.mount('#app')
 
 .second-qr {
   width: 50%;
-}
-
-.pre-dark {
-  background: #1e1e1e;
-  color: #d4d4d4;
-  padding: 16px;
-  border-radius: 8px;
-  font-family: 'Fira Code', monospace;
-  line-height: 1.5;
-  overflow-x: auto;
 }
 
 .t-tag {

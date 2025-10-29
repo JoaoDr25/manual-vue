@@ -21,7 +21,7 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre class="pre-dark" style="margin-bottom: 21px;"><code>
+          <pre class="pre-dark" style="margin-bottom: 42px; margin-top: 0;"><code>
 &lt;template&gt;
   &lt;q-page <span class="t-attr">padding</span>&gt;
     &lt;h1&gt;Hola, &#123;&#123; <span class="t-ident">nombre</span> &#125;&#125; 👋&lt;/h1&gt;
@@ -53,7 +53,7 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre class="pre-dark" style="margin-bottom: 0;"><code>
+          <pre class="pre-dark" style="margin-bottom: 0; margin-top: 0;"><code>
 &lt;template&gt;
   &lt;div class="example"&gt;
     &lt;p&gt;El año actual es: &#123;&#123; <span class="t-fn">new</span> <span class="t-class">Date</span>().<span class="t-ident">getFullYear</span>() &#125;&#125;&lt;/p&gt;
@@ -86,7 +86,7 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <pre class="pre-dark"><code>
+          <pre class="pre-dark" style="margin-top: 0;"><code>
 &lt;template&gt;
   &lt;img <span class="t-attr">:alt</span>=<span class="t-string">&quot;&#96;Foto de &#36;&#123;<span class="t-ident">nombre</span>&#125;&#96;&quot;</span> <span class="t-attr">:src</span>=<span class="t-ident">imagenUrl</span> /&gt;
 &lt;/template&gt;
@@ -143,20 +143,24 @@ const imagenUrl = 'https://vuejs.org/images/logo.png'
 
 .code-terminal {
   background: #1e1e1e;
-  color: #e8e8e8;
-  padding: 1rem 1.5rem;
+  color: #d4d4d4;
   border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 10px 52px 20px 50px;
+  overflow: hidden;
   font-family: 'Fira Code', monospace;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  margin: 10px 52px 10px 50px;
-  overflow-x: auto;
-  cursor: pointer;
 }
 
 .code-header {
+  background: #2d2d2d;
+  padding: 8px 12px;
   display: flex;
   gap: 6px;
-  margin-bottom: 0.5rem;
+}
+
+.pre-dark {
+  padding: 16px 24px;
+  cursor: text;
 }
 
 .dot {
@@ -181,16 +185,6 @@ const imagenUrl = 'https://vuejs.org/images/logo.png'
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto;
-}
-
-.pre-dark {
-  background: #1e1e1e;
-  color: #d4d4d4;
-  padding: 16px;
-  border-radius: 8px;
-  font-family: 'Fira Code', monospace;
-  line-height: 1.5;
-  overflow-x: auto;
 }
 
 .t-tag {
