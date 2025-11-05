@@ -9,8 +9,31 @@
       Gracias a Pinia puedes compartir estados (datos reactivos) entre componentes sin tener que pasar props
       manualmente. Esto facilita el mantenimiento de la aplicación y mejora la organización del código.
     </p>
+    <p>En conjunto, Pinia proporciona una forma simple, reactiva y escalable de manejar el estado global en Vue 3.
+Su integración nativa con la Composition API, su sintaxis intuitiva y su compatibilidad con herramientas modernas hacen que sea la opción ideal para construir aplicaciones profesionales, modulares y mantenibles.. En pocas líneas de código puedes crear un store funcional, fácil de integrar y con soporte completo para depuración, persistencia y tipado estático.</p>
+    <p></p>
 
     <div class="blocks-qr">
+
+      <div class="part02-qr">
+        <h6>Estructura y beneficios de los stores en Pinia:</h6>
+        <p>Cada store en Pinia actúa como un módulo de estado independiente, encargado de gestionar una parte específica de los datos de la aplicación. Estos módulos son completamente reusables, lo que facilita mantener el código organizado, escalable y fácil de depurar.</p>
+        <p>Dentro de cada store se definen tres elementos fundamentales:</p>
+        <ul>
+          <li><span>State:</span> Contiene las variables reactivas globales, que representan el estado compartido de la aplicación (por ejemplo, usuarios, productos, configuraciones, etc.).</li>
+          <li><span>Actions:</span> Son métodos que permiten modificar el estado o ejecutar lógica de negocio. Pueden realizar operaciones síncronas o asíncronas, como llamadas a una API o validaciones antes de cambiar el estado.</li>
+          <li><span>Getters:</span> Funcionan como propiedades computadas derivadas del estado. Son ideales para obtener información procesada sin duplicar datos ni lógica.</li>
+        </ul>
+        <p>
+          Los stores pueden ser usados en cualquier componente de la aplicación, y además ofrecen compatibilidad con:
+        </p>
+         <ul>
+          <li>Persistencia del estado, para mantener los datos entre recargas del navegador.</li>
+          <li>TypeScript, con tipado completo e inferencia automática, mejorando la productividad y evitando errores.</li>
+          <li>Vue DevTools, lo que facilita la inspección y depuración en tiempo real.</li>
+        </ul>    
+      </div>
+
       <div class="part01-qr">
         <h6>
           Instalación:
@@ -18,7 +41,7 @@
         <p>
           Antes de usar Pinia, debes instalarla con npm:
         </p>
-        <div class="code-terminal" style="padding-bottom: 0; margin-bottom: 40px; margin-top: 20px;">
+        <div class="code-terminal" style="padding-bottom: 0; margin-top: 20px;">
           <div class="code-header">
             <span class="dot red"></span>
             <span class="dot yellow"></span>
@@ -33,7 +56,7 @@
           Y luego integrarla en tu aplicación principal (por ejemplo, en main.js):
         </p>
 
-        <div class="code-terminal" style="padding-bottom: 0; margin-bottom: 40px; margin-top: 20px;">
+        <div class="code-terminal" style="padding-bottom: 20px; margin-top: 20px;">
           <div class="code-header">
             <span class="dot red"></span>
             <span class="dot yellow"></span>
@@ -54,19 +77,6 @@
         </div>
       </div>
 
-      <div class="part02-qr">
-        <h6>Conceptos Clave</h6>
-        <p>Cada store en Pinia actúa como un "módulo de estado" que puede contener:</p>
-        <ul>
-          <li><span>State:</span> variables reactivas globales.</li>
-          <li><span>Actions:</span> métodos que modifican el estado.</li>
-          <li><span>Getters:</span> valores derivados del estado, similares a propiedades computadas.</li>
-        </ul>
-        <p>
-          Los stores pueden usarse en cualquier componente, y también soportan persistencia, devtools y tipado con
-          TypeScript.
-        </p>
-      </div>
     </div>
 
     <h6>
@@ -130,14 +140,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <h6>En resumen</h6> -->
-    <p>Pinia ofrece una forma simple, reactiva y escalable de manejar el estado global en aplicaciones Vue 3.
-      Su integración nativa con Composition API, junto con la compatibilidad con Vue DevTools, la convierte en la opción
-      ideal para proyectos modernos.</p>
-    <p><em>En pocas líneas puedes tener un store funcional, fácilmente integrable y con soporte completo para TypeScript
-        y herramientas de depuración.</em></p>
-
 
   </q-page>
 </template>
@@ -225,7 +227,6 @@
 
 .pre-dark {
   padding: 16px 24px;
-  /* cursor:text; */
 }
 
 .dot {
@@ -250,6 +251,14 @@
 display: flex;
 }
 
+.blocks-qr p {
+  text-align: justify;
+}
+
+.blocks-qr ul {
+  text-align: justify;
+}
+
 .part01-qr {
 width: 50%;
 }
@@ -264,7 +273,6 @@ width: 50%;
 
 .first-qr {
   width: 50%;
-  margin-bottom: 30px;
 }
 
 .second-qr {
