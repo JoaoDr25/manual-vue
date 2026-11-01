@@ -179,7 +179,7 @@ Su integración nativa con la Composition API, su sintaxis intuitiva y su compat
   font-size: 0.96rem;
   margin: 4px 0 0 20px;
   font-family: sans-serif;
-  margin: 20px 60px 10px 50px;
+  margin: 0px 60px 10px 50px;
 }
 
 .pinia-qr h1 {
