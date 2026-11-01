@@ -4,6 +4,7 @@ import { createPinia } from 'pinia'
 
 import 'quasar/src/css/index.sass'
 import '@quasar/extras/material-icons/material-icons.css'
+import './assets/responsive-code.css'
 
 import App from './App.vue'
 import router from './router'
@@ -12,7 +13,6 @@ const myApp = createApp(App)
 const pinia = createPinia()
 
 myApp.use(Quasar, {
-  components: ['QLayout', 'QHeader', 'QToolbar', 'QToolbarTitle', 'QAvatar', 'QBtn', 'QBtnDropdown', 'QList', 'QItem', 'QItemSection', 'QItemLabel', 'QPageContainer', 'QPage'],
   plugins: {},
 })
 myApp.use(pinia)

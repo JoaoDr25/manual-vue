@@ -1,8 +1,6 @@
 <template>
   <q-page padding class="requisitos-qr">
-    <div class="logo-qr">
-      <h1 style="margin-right: 20px;">Requisitos de Instalación</h1> <img src="../assets/img instalacion.png" alt="logo de instalacion">
-    </div>
+      <h1 style="margin-right: 20px;">Requisitos de Instalación</h1>
     <p>
       Antes de comenzar a desarrollar aplicaciones con Vue.js, es fundamental asegurarse de cumplir con
       ciertos requisitos técnicos que garanticen un entorno de desarrollo estable, compatible y sin errores.
@@ -90,20 +88,12 @@
 </template>
 
 <script setup></script>
+
 <style scoped>
+
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
-}
-
-.logo-qr {
-  display: flex;
-}
-
-.logo-qr img {
-  height: 98px;
-  margin: 22px 0 0px 20px;
-
 }
 
 .requisitos-qr h1 {

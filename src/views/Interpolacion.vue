@@ -115,10 +115,8 @@ const nombre = ref('Camilo')
 const imagenUrl = 'https://vuejs.org/images/logo.png'
 </script>
 
-
-<script setup></script>
-
 <style scoped>
+
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
@@ -146,7 +144,8 @@ const imagenUrl = 'https://vuejs.org/images/logo.png'
   color: #d4d4d4;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  margin: 10px 52px 20px 50px;
+  margin: 10px 24px 20px;
+  min-width: 0;
   overflow: hidden;
   font-family: 'Fira Code', monospace;
 }
@@ -159,6 +158,9 @@ const imagenUrl = 'https://vuejs.org/images/logo.png'
 }
 
 .pre-dark {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: auto;
   padding: 16px 24px;
   cursor: text;
 }
@@ -183,8 +185,13 @@ const imagenUrl = 'https://vuejs.org/images/logo.png'
 
 .blocks-qr {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: 1fr auto;
+  gap: 24px;
+}
+
+.blocks-qr > div {
+  min-width: 0;
 }
 
 .t-tag {
@@ -215,5 +222,28 @@ const imagenUrl = 'https://vuejs.org/images/logo.png'
   color: #ffffff;
   opacity: 0.5;
   font-style: normal;
+}
+
+@media (max-width: 900px) {
+  .blocks-qr {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .interpolacion-qr h1 {
+    font-size: 2.5rem;
+    padding-left: 0;
+    margin: 16px 22px 10px;
+  }
+
+  .interpolacion-qr p {
+    margin: 16px 22px 10px;
+  }
+
+  .code-terminal {
+    margin: 10px 12px 20px;
+  }
 }
 </style>

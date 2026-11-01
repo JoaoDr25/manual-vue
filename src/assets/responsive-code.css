@@ -1,0 +1,124 @@
+.code-terminal {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.code-terminal pre {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 900px) {
+  .main-qr,
+  .bloque-qr,
+  .parte01-qr,
+  .parte02-qr,
+  .contenidoImagenes-qr,
+  .frase-qr {
+    flex-direction: column;
+  }
+
+  .blocks-qr {
+    flex-direction: column;
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .bloque-qr {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .first-qr,
+  .second-qr,
+  .part01-qr,
+  .part02-qr,
+  .subparte01-qr,
+  .subparte02-qr {
+    width: 100% !important;
+    min-width: 0;
+  }
+
+  .bloque-qr > div:not(.code-terminal) {
+    width: 100% !important;
+    min-width: 0;
+  }
+
+  .bloque02-qr {
+    margin-right: 0 !important;
+  }
+
+  .frase-qr p {
+    margin-left: 22px !important;
+    margin-right: 22px !important;
+  }
+
+  .code-terminal {
+    width: auto !important;
+    margin: 10px 12px 20px !important;
+  }
+
+  .recursos-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 20px 22px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .recursos-qr .recursos-container {
+    grid-template-columns: minmax(0, 1fr);
+    margin: 20px 22px 10px;
+  }
+
+  .requisitos-qr .table-qr,
+  .opcion-qr .table-qr {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 20px 22px 10px !important;
+    overflow-x: auto;
+  }
+
+  .ciclo-qr h1,
+  .opcion-qr h1,
+  .recursos-qr h1,
+  .requisitos-qr h1 {
+    margin: 20px 22px 10px !important;
+    padding: 0 !important;
+    font-size: 2.5rem !important;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 700px) {
+  .q-page h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.18 !important;
+  }
+
+  .q-page h1 + p {
+    margin-top: 12px !important;
+  }
+
+  .introduccion-qr .logo-vue + p,
+  .pinia-qr .titulo-pinia + p,
+  .creacion-qr .paragraph-qr p {
+    margin-top: 12px !important;
+  }
+
+  .recursos-qr h1 + .recursos-container {
+    margin-top: 12px !important;
+  }
+
+  .pinia-qr .titulo-pinia {
+    align-items: center;
+  }
+
+  .pinia-qr .titulo-pinia h1 {
+    margin-bottom: 0 !important;
+  }
+
+  .pinia-qr .titulo-pinia img {
+    height: 56px;
+    margin: 0;
+  }
+}

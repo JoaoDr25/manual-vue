@@ -81,6 +81,7 @@
 <script setup></script>
 
 <style>
+
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');

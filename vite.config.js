@@ -8,7 +8,7 @@ export default defineConfig({
       template: { transformAssetUrls }
     }),
     quasar({
-      autoImportComponentCase: 'pascal'
+      autoImportComponentCase: 'kebab'
     }),
   ]
 })

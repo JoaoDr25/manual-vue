@@ -45,12 +45,11 @@
         </li>
       </ul>
 
-      <div class="video-container">
-        <iframe width="560" height="335" src="https://www.youtube.com/embed/9AHMihFhrzw?si=5bv2sxBDsDTj-P3l"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
+      <img
+        class="intro-image"
+        src="../assets/vue estructura de carpetas.png"
+        alt="Estructura de carpetas de un proyecto Vue"
+      >
     </div>
 
     <div class="main-title">
@@ -107,10 +106,10 @@
   </q-page>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style scoped>
+
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
@@ -165,10 +164,11 @@
 }
 
 .main-container {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 55px;
-  padding-left: 30px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 24px;
+  margin: 0 55px 0 30px;
 }
 
 .main-container h2 {
@@ -179,15 +179,16 @@
 .main-container li {
   padding-bottom: 5px;
   text-align: justify;
-  padding-right: 64px;
+  padding-right: 20px;
   font-size: 0.96rem;
 }
 
-.video-container {
-  width: 40rem;
-  filter: drop-shadow(2px 4px 6px black);
-  margin-left: 22px;
-  margin-top: 20px;
+.intro-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  box-shadow: 2px 4px 6px #0004;
 }
 
 .second-container {
@@ -208,5 +209,57 @@
 .parteUno,
 .parteDos {
   width: 50%;
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    margin: 0 30px;
+  }
+
+  .main-container li {
+    padding-right: 0;
+  }
+
+  .second-container {
+    flex-direction: column;
+    gap: 0;
+    padding: 0 30px;
+  }
+
+  .parteUno,
+  .parteDos {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .logo-vue img {
+    height: 64px;
+    margin-top: 18px;
+  }
+
+  .introduccion-qr h1 {
+    font-size: 2.5rem;
+    margin: 18px 0 0 22px;
+  }
+
+  .main-title h3 {
+    font-size: 1.6rem;
+    margin: 40px 22px 0;
+  }
+
+  .introduccion-qr p {
+    margin: 16px 22px 10px;
+  }
+
+  .main-container {
+    margin: 0 22px;
+  }
+
+  .second-container {
+    padding: 0 22px;
+  }
 }
 </style>

@@ -1,8 +1,6 @@
 <template>
   <q-page padding class="router-qr">
-    <div class="logo-qr">
-      <h1>Vue Router</h1><img src="../assets/image-libreria.png" alt="logo de libreria">
-    </div>
+      <h1>Vue Router</h1>
     <p>
       Vue Router es la biblioteca oficial de enrutamiento de Vue.js, diseñada para gestionar la navegación dentro de
       aplicaciones creadas con este framework.
@@ -20,9 +18,9 @@
     </h6>
 
     <br>
-    <div class="bloque-qr" style="width: 100%;">
+    <div class="bloque-qr">
 
-      <div style="width: 50%;">
+      <div>
 
         <p style="margin-top: 0;">
           Para utilizar Vue Router, primero debemos instalarlo. Si estás utilizando Vue CLI, puedes agregar Vue Router
@@ -63,7 +61,7 @@
         </p>
       </div>
 
-      <div class="code-terminal" style="margin-top: 0; margin-left: 30px; width: 40.8%;">
+      <div class="code-terminal">
         <div class="code-header">
           <span class="dot red"></span>
           <span class="dot yellow"></span>
@@ -285,20 +283,12 @@
 </template>
 
 <script setup></script>
+
 <style scoped>
+
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
-}
-
-.logo-qr {
-  display: flex;
-}
-
-.logo-qr img {
-  height: 140px;
-  margin: -17px 0px 6px -19px;
-
 }
 
 .router-qr h1 {
@@ -333,7 +323,18 @@
 }
 
 .bloque-qr {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.bloque-qr > div {
+  min-width: 0;
+}
+
+.bloque-qr .code-terminal {
+  width: auto;
+  margin: 10px 52px 20px;
 }
 
 .bloque-qr img {

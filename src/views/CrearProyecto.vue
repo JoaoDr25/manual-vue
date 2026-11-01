@@ -1,8 +1,7 @@
 <template>
   <q-page padding class="creacion-qr">
     <div class="proyecto-qr">
-      <h1>Creación de un Proyecto con Vite</h1> <img src="../assets/imagen creacion de proyecto.png"
-        alt="imagen de carpeta">
+      <h1>Creación de un Proyecto con Vite</h1>
     </div>
     <div class="paragraph-qr">
       <p>
@@ -116,7 +115,9 @@ Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 
 </template>
 
 <script setup></script>
+
 <style scoped>
+
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
@@ -137,22 +138,34 @@ Seleccione las opciones según las necesidades. En este ejemplo, se utiliza Vue 
 }
 
 .main-container {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 100px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.7fr);
+  align-items: start;
+  gap: 30px;
+  margin: 24px 30px 0;
+}
+
+.main-container > div,
+.container02 {
+  min-width: 0;
 }
 
 .main-container li {
-  margin: 0 50px 0 20px;
-  width: 50rem;
+  margin: 0 12px 0 20px;
+  width: auto;
 }
 
 .container02 h6 {
   font-size: 15px;
   font-family: 'prototype', sans-serif;
   padding-top: 15px;
-  margin: 0 0 0 66px;
+  margin: 0;
   line-height: 20px;
+}
+
+.container02 pre {
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .paragraph-qr {
@@ -214,5 +227,38 @@ pre {
   padding: 1rem 1.2rem;
   overflow-x: auto;
   cursor: text;
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin: 24px 22px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .proyecto-qr {
+    align-items: center;
+    margin: 0 22px;
+  }
+
+  .proyecto-qr h1 {
+    font-size: 2.5rem;
+    padding-left: 0;
+  }
+
+  .proyecto-qr img {
+    height: 64px;
+    margin: 0 0 0 10px;
+  }
+
+  .paragraph-qr {
+    margin: 0 22px;
+  }
+
+  .creacion-qr p {
+    margin: 16px 0;
+  }
 }
 </style>

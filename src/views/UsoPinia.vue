@@ -1,7 +1,7 @@
 <template>
   <q-page class="pinia-qr">
     <div class="titulo-pinia">
-      <h1>Pinia</h1> <img src="../assets/image-removebg-preview.png" alt="foto pinia">
+      <h1>Pinia</h1>
     </div>
     <p>
       Pinia es la librería oficial recomendada para la gestión de estado en Vue 3.
@@ -145,7 +145,9 @@ Su integración nativa con la Composition API, su sintaxis intuitiva y su compat
 </template>
 
 <script setup></script>
+
 <style scoped>
+
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');

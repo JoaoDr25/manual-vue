@@ -119,7 +119,9 @@
 </template>
 
 <script setup></script>
+
 <style scoped>
+
 @font-face {
   font-family: 'prototype';
   src: url('../fonts/Prototype.ttf') format('truetype');
